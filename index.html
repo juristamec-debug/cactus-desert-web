@@ -46,7 +46,10 @@
       property="og:image"
       content="https://images.unsplash.com/photo-1494516192674-b82b5f1e61dc?auto=format&fit=crop&w=1200&q=80"
     />
-    <meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1494516192674-b82b5f1e61dc?auto=format&fit=crop&w=1200&q=80" />
+    <meta
+      property="og:image:secure_url"
+      content="https://images.unsplash.com/photo-1494516192674-b82b5f1e61dc?auto=format&fit=crop&w=1200&q=80"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Cactus y suculentas coloridas en Cactus Desert (Ecuador)" />
@@ -265,16 +268,19 @@
 
   <body class="bg-brand-bg font-body text-brand-dark">
     <header class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-brand-sand/50">
-        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 lg:py-2">
-        <a href="#hero" class="flex items-center gap-3 text-brand-dark">
-          <!-- ✅ LOGO (80px móvil / 150px PC) SIN CÍRCULO -->
-          <img
-            src="https://i.postimg.cc/fymrSRpK/oie-transparent-(1).png"
-            alt="Cactus Desert"
-            class="h-[80px] w-auto lg:h-[150px] lg:w-auto object-contain"
-            decoding="async"
-            loading="eager"
-          />
+      <!-- ✅ FRANJA FIJA (NO CRECE) -->
+      <div class="mx-auto flex h-[92px] max-w-6xl items-center justify-between px-6">
+        <a href="#hero" class="relative flex h-full items-center gap-3 text-brand-dark">
+          <!-- ✅ LOGO MISMO TAMAÑO, PERO SIN AGRANDAR LA FRANJA -->
+          <span class="relative block h-full w-[170px] lg:w-[280px] overflow-visible">
+            <img
+              src="https://i.postimg.cc/fymrSRpK/oie-transparent-(1).png"
+              alt="Cactus Desert"
+              class="absolute left-0 top-1 h-[80px] w-auto lg:h-[150px] lg:w-auto object-contain"
+              decoding="async"
+              loading="eager"
+            />
+          </span>
 
           <span class="font-display text-xl"></span>
         </a>
@@ -1088,8 +1094,9 @@
     </div>
 
     <!-- MODAL (DETALLES PRODUCTO) -->
-    <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 px-4 py-10" role="dialog" aria-modal="true">
-      <div class="w-full max-w-3xl rounded-3xl bg-white p-6 shadow-soft">
+    <!-- ✅ MÁS PEQUEÑO PARA QUE SE VEA COMPLETO -->
+    <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 px-4 py-6" role="dialog" aria-modal="true">
+      <div class="w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-soft">
         <div class="flex items-start justify-between gap-6">
           <div>
             <p class="text-sm uppercase tracking-[0.3em] text-brand-primary" id="modal-category"></p>
@@ -1102,7 +1109,7 @@
           <div>
             <div class="rounded-2xl border border-brand-sand/60 bg-brand-sand/10 p-2">
               <img
-                class="h-72 w-full rounded-2xl object-contain sm:h-80 md:h-96 cursor-zoom-in"
+                class="h-60 w-full rounded-2xl object-contain sm:h-72 md:h-80 cursor-zoom-in"
                 id="modal-image"
                 alt=""
               />
@@ -1168,6 +1175,7 @@
     </div>
 
     <!-- ✅ LIGHTBOX FULLSCREEN (CARRUSEL) -->
+    <!-- ✅ IMAGEN UN POCO MÁS PEQUEÑA PARA QUE TODO SE VEA COMPLETO -->
     <div id="lightbox" class="fixed inset-0 z-[99] hidden items-center justify-center bg-black/90 p-4" role="dialog" aria-modal="true">
       <div class="relative w-full max-w-5xl">
         <button
@@ -1199,7 +1207,7 @@
         <div class="flex flex-col items-center">
           <img
             id="lightboxImage"
-            class="mx-auto max-h-[80vh] w-auto max-w-full rounded-2xl object-contain"
+            class="mx-auto max-h-[65vh] md:max-h-[70vh] w-auto max-w-full rounded-2xl object-contain"
             alt=""
           />
           <div class="mt-2 flex w-full items-center justify-center">
@@ -1314,8 +1322,9 @@
     </div>
 
     <!-- ✅ MODAL PEDIDO RECIBIDO + PAGO + COMPROBANTE -->
-    <div id="paymentModal" class="fixed inset-0 z-[93] hidden items-center justify-center bg-black/60 px-4 py-10" role="dialog" aria-modal="true">
-      <div class="w-full max-w-2xl rounded-3xl bg-white p-6 shadow-soft">
+    <!-- ✅ MÁS PEQUEÑO PARA QUE SE VEA COMPLETO -->
+    <div id="paymentModal" class="fixed inset-0 z-[93] hidden items-center justify-center bg-black/60 px-4 py-6" role="dialog" aria-modal="true">
+      <div class="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-soft">
         <div class="flex flex-col items-center text-center">
           <div class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-sand/40 text-2xl">✅</div>
           <h3 class="mt-3 font-display text-3xl text-brand-primary">¡Pedido Recibido!</h3>
@@ -1404,10 +1413,7 @@
           details: ["Incluye guía de cuidados", "Ideal para escritorio", "Empaque reforzado", EMPAQUE_GARANTIZADO],
           message: "Hola, quiero el Paquete x6 de cactus y suculentas.",
           price: 24,
-          images: [
-            "https://i.postimg.cc/J7XPKSgn/1.png",
-            "https://i.postimg.cc/PJkrGPjv/2.png",
-          ],
+          images: ["https://i.postimg.cc/J7XPKSgn/1.png", "https://i.postimg.cc/PJkrGPjv/2.png"],
         },
         "paquete-9": {
           category: "Paquete",
@@ -2081,9 +2087,7 @@
         if (fsItems) fsItems.value = itemsTxt;
 
         if (fsBank) {
-          fsBank.value = `Banco: ${BANK.banco} | Cuenta: ${BANK.cuenta} | Nombre: ${BANK.nombre} | Cédula/RUC: ${BANK.cedula} | Total: ${money(
-            order.total
-          )}`;
+          fsBank.value = `Banco: ${BANK.banco} | Cuenta: ${BANK.cuenta} | Nombre: ${BANK.nombre} | Cédula/RUC: ${BANK.cedula} | Total: ${money(order.total)}`;
         }
 
         paymentModal.classList.remove("hidden");
@@ -2207,7 +2211,6 @@
       });
 
       hydrateCardImages();
-
       updateBadge();
     </script>
   </body>
