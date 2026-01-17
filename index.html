@@ -277,6 +277,18 @@
         max-height: 92vh;
         overflow: hidden;
       }
+
+      /* ✅ SCROLL CON EL DEDO EN MÓVIL PARA EL MODAL DE DETALLES */
+      @media (max-width: 640px) {
+        .modal-panel {
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none; /* Firefox */
+        }
+        .modal-panel::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Edge */
+        }
+      }
     </style>
   </head>
 
