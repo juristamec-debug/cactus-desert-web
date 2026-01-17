@@ -263,6 +263,20 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      /* ✅ MODALES SIN SCROLL (solo reducir tamaño para que quepan) */
+      .modal-panel {
+        max-height: 92vh;
+        overflow: hidden;
+      }
+      .modal-image {
+        height: clamp(170px, 32vh, 300px);
+      }
+
+      .pay-panel {
+        max-height: 92vh;
+        overflow: hidden;
+      }
     </style>
   </head>
 
@@ -271,12 +285,12 @@
       <!-- ✅ FRANJA FIJA (NO CRECE) -->
       <div class="mx-auto flex h-[92px] max-w-6xl items-center justify-between px-6">
         <a href="#hero" class="relative flex h-full items-center gap-3 text-brand-dark">
-          <!-- ✅ LOGO MISMO TAMAÑO, PERO SIN AGRANDAR LA FRANJA -->
-          <span class="relative block h-full w-[170px] lg:w-[280px] overflow-visible">
+          <!-- ✅ LOGO: SIEMPRE DENTRO DEL CONTENEDOR (NO SE SALE) -->
+          <span class="flex h-full w-[170px] lg:w-[260px] items-center overflow-hidden">
             <img
               src="https://i.postimg.cc/fymrSRpK/oie-transparent-(1).png"
               alt="Cactus Desert"
-              class="absolute left-0 top-1 h-[80px] w-auto lg:h-[150px] lg:w-auto object-contain"
+              class="h-[76px] w-auto object-contain lg:h-[82px]"
               decoding="async"
               loading="eager"
             />
@@ -1094,9 +1108,9 @@
     </div>
 
     <!-- MODAL (DETALLES PRODUCTO) -->
-    <!-- ✅ MÁS PEQUEÑO PARA QUE SE VEA COMPLETO -->
+    <!-- ✅ SIN SCROLL: panel reducido para que entre completo -->
     <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 px-4 py-6" role="dialog" aria-modal="true">
-      <div class="w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-soft">
+      <div class="modal-panel w-full max-w-3xl rounded-3xl bg-white p-4 md:p-5 shadow-soft">
         <div class="flex items-start justify-between gap-6">
           <div>
             <p class="text-sm uppercase tracking-[0.3em] text-brand-primary" id="modal-category"></p>
@@ -1105,28 +1119,28 @@
           <button id="modal-close" class="rounded-full border border-brand-sand/70 px-4 py-2 text-sm text-brand-dark">Cerrar</button>
         </div>
 
-        <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <div class="mt-4 grid gap-5 md:grid-cols-2">
           <div>
             <div class="rounded-2xl border border-brand-sand/60 bg-brand-sand/10 p-2">
               <img
-                class="h-60 w-full rounded-2xl object-contain sm:h-72 md:h-80 cursor-zoom-in"
+                class="modal-image w-full rounded-2xl object-contain cursor-zoom-in"
                 id="modal-image"
                 alt=""
               />
             </div>
-            <div class="mt-4 flex gap-3 overflow-x-auto" id="modal-gallery"></div>
-            <p class="mt-2 text-xs text-brand-dark/60">Tip: clic en la imagen para ver en pantalla completa.</p>
+            <div class="mt-3 flex gap-3 overflow-x-auto" id="modal-gallery"></div>
+            <p class="mt-2 text-[11px] text-brand-dark/60">Tip: clic en la imagen para ver en pantalla completa.</p>
           </div>
 
           <div>
             <p class="text-sm text-brand-dark/80" id="modal-description"></p>
 
-            <ul class="mt-4 space-y-2 text-sm text-brand-dark/80" id="modal-details"></ul>
+            <ul class="mt-3 space-y-2 text-sm text-brand-dark/80" id="modal-details"></ul>
 
-            <div class="mt-5 rounded-2xl border border-brand-sand/60 bg-white p-4">
-              <div class="space-y-3">
+            <div class="mt-4 rounded-2xl border border-brand-sand/60 bg-white p-3">
+              <div class="space-y-2">
                 <div class="flex items-start gap-3">
-                  <div class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-sand/35 text-base">🛡️</div>
+                  <div class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-brand-sand/35 text-base">🛡️</div>
                   <div>
                     <p class="text-sm font-semibold text-brand-dark">Compra segura</p>
                     <p class="text-xs text-brand-dark/70">Pago por transferencia bancaria. Confirmación al subir tu comprobante.</p>
@@ -1134,7 +1148,7 @@
                 </div>
 
                 <div class="flex items-start gap-3">
-                  <div class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-sand/35 text-base">⏱️</div>
+                  <div class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-brand-sand/35 text-base">⏱️</div>
                   <div>
                     <p class="text-sm font-semibold text-brand-dark">Entrega coordinada</p>
                     <p class="text-xs text-brand-dark/70">Generalmente se coordina despacho en 1–2 días hábiles (según ciudad).</p>
@@ -1142,7 +1156,7 @@
                 </div>
 
                 <div class="flex items-start gap-3">
-                  <div class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-sand/35 text-base">📦</div>
+                  <div class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-brand-sand/35 text-base">📦</div>
                   <div>
                     <p class="text-sm font-semibold text-brand-dark">Empaque garantizado</p>
                     <p class="text-xs text-brand-dark/70">Sistema de empaque reforzado para que tu pedido llegue muy bien protegido.</p>
@@ -1151,9 +1165,9 @@
               </div>
             </div>
 
-            <div class="mt-6 flex flex-col gap-3">
+            <div class="mt-4 flex flex-col gap-3">
               <a
-                class="rounded-full bg-brand-primary px-5 py-2 text-center text-sm font-semibold text-white hover:bg-brand-primary/90"
+                class="rounded-full bg-brand-primary px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-brand-primary/90"
                 href="https://instagram.com/cactus.suculentas.ec"
                 target="_blank"
                 rel="noreferrer"
@@ -1163,7 +1177,7 @@
 
               <button
                 id="modal-add"
-                class="rounded-full bg-brand-dark/5 px-5 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-dark/10"
+                class="rounded-full bg-brand-dark/5 px-5 py-2.5 text-sm font-semibold text-brand-dark hover:bg-brand-dark/10"
                 type="button"
               >
                 Agregar al carrito
@@ -1175,7 +1189,6 @@
     </div>
 
     <!-- ✅ LIGHTBOX FULLSCREEN (CARRUSEL) -->
-    <!-- ✅ IMAGEN UN POCO MÁS PEQUEÑA PARA QUE TODO SE VEA COMPLETO -->
     <div id="lightbox" class="fixed inset-0 z-[99] hidden items-center justify-center bg-black/90 p-4" role="dialog" aria-modal="true">
       <div class="relative w-full max-w-5xl">
         <button
@@ -1322,17 +1335,17 @@
     </div>
 
     <!-- ✅ MODAL PEDIDO RECIBIDO + PAGO + COMPROBANTE -->
-    <!-- ✅ MÁS PEQUEÑO PARA QUE SE VEA COMPLETO -->
+    <!-- ✅ SIN SCROLL: panel reducido + pasos en 2 columnas en escritorio -->
     <div id="paymentModal" class="fixed inset-0 z-[93] hidden items-center justify-center bg-black/60 px-4 py-6" role="dialog" aria-modal="true">
-      <div class="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-soft">
+      <div class="pay-panel w-full max-w-2xl rounded-3xl bg-white p-4 md:p-5 shadow-soft">
         <div class="flex flex-col items-center text-center">
-          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-sand/40 text-2xl">✅</div>
-          <h3 class="mt-3 font-display text-3xl text-brand-primary">¡Pedido Recibido!</h3>
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-sand/40 text-xl">✅</div>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl text-brand-primary">¡Pedido Recibido!</h3>
           <p class="mt-2 text-sm text-brand-dark/80">Gracias. Completa tu compra con los siguientes pasos.</p>
           <p class="mt-1 text-xs text-brand-dark/60"><span id="orderIdText"></span></p>
         </div>
 
-        <div class="mt-6 space-y-4">
+        <div class="mt-5 grid gap-4 md:grid-cols-2">
           <div class="rounded-2xl border border-brand-sand/60 bg-brand-sand/15 p-4">
             <p class="font-semibold text-brand-primary">Paso 1: Realiza el Pago</p>
             <div class="mt-2 text-sm text-brand-dark/80">
@@ -1367,7 +1380,7 @@
               <input id="receiptFile" name="attachment" type="file" accept="image/png,image/jpeg,image/jpg,image/webp" class="hidden" required />
               <label
                 for="receiptFile"
-                class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-primary/90"
+                class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-primary/90"
               >
                 🧾 Seleccionar imagen del comprobante
               </label>
@@ -1377,24 +1390,22 @@
               <button
                 id="sendReceiptBtn"
                 type="submit"
-                class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-sand px-5 py-3 text-sm font-semibold text-brand-dark shadow-soft transition hover:opacity-95"
+                class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-sand px-5 py-2.5 text-sm font-semibold text-brand-dark shadow-soft transition hover:opacity-95"
               >
                 📩 Enviar Comprobante
               </button>
-
-              <p class="mt-2 text-xs text-brand-dark/60">.</p>
             </form>
           </div>
+        </div>
 
-          <div class="flex justify-center">
-            <button
-              id="paymentClose"
-              type="button"
-              class="w-full rounded-xl bg-brand-dark/5 px-5 py-3 text-sm font-semibold text-brand-dark hover:bg-brand-dark/10 sm:w-56"
-            >
-              Cerrar
-            </button>
-          </div>
+        <div class="mt-4 flex justify-center">
+          <button
+            id="paymentClose"
+            type="button"
+            class="w-full rounded-xl bg-brand-dark/5 px-5 py-3 text-sm font-semibold text-brand-dark hover:bg-brand-dark/10 sm:w-56"
+          >
+            Cerrar
+          </button>
         </div>
       </div>
     </div>
@@ -1738,7 +1749,7 @@
           btn.dataset.idx = String(idx);
           btn.className =
             "shrink-0 rounded-xl border border-brand-sand/60 hover:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/40";
-          btn.innerHTML = `<img src="${src}" alt="Foto ${idx + 1}" class="h-16 w-24 rounded-xl object-cover" />`;
+          btn.innerHTML = `<img src="${src}" alt="Foto ${idx + 1}" class="h-14 w-20 rounded-xl object-cover" />`;
           btn.addEventListener("click", () => setModalImageByIndex(idx));
           modalGallery.appendChild(btn);
         });
