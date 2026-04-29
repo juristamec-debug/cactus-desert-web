@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Arma tu Paquete | Cactus Desert Ecuador</title>
+  <meta name="description" content="Elige exactamente qué suculentas quieres. Entre más plantas escoges, menos pagas. Mínimo 6 plantas + $7 envío a todo Ecuador."/>
+  <link rel="canonical" href="https://www.cactusdesert.com/arma-tu-paquete.html"/>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/fymrSRpK/oie-transparent-(1).png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --orange:#df7b3e;--orangedk:#c96a2e;
+      --dark:#2a1408;--darkmd:#5e261a;
+      --green:#2d6a4f;
+      --sand:#e8b46d;--sandlt:#f5e0b8;
+      --cream:#faf5ec;--creamdk:#f0e6d0;
+      --white:#fff;--wa:#25D366;--wadk:#1ebe5d;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden;padding-bottom:85px}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:200;height:96px;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,245,236,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,180,109,.4)}
+    .nav img{height:88px;width:auto;object-fit:contain}
+    .nav-back{font-size:.78rem;font-weight:500;color:var(--darkmd);opacity:.7;text-decoration:none}
+    .nav-back:hover{opacity:1;color:var(--orange)}
+
+    /* HERO */
+    .hero{padding:104px 1.25rem 1rem;text-align:center}
+    .hero-ey{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:.5rem}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,6vw,3rem);font-weight:700;line-height:1.1;color:var(--dark);margin-bottom:.6rem}
+    .hero h1 em{font-style:italic;color:var(--darkmd)}
+    .hero-sub{font-size:.88rem;line-height:1.65;color:var(--darkmd);opacity:.8;max-width:500px;margin:0 auto}
+
+    /* TABLA PRECIOS */
+    .pricing{padding:.75rem 1rem 0}
+    .pricing-label{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--darkmd);opacity:.45;text-align:center;margin-bottom:.6rem}
+    .pricing-row{display:flex;gap:.35rem;padding-bottom:.25rem}
+    .tier{flex:1;min-width:0;background:var(--white);border:2px solid rgba(232,180,109,.25);border-radius:10px;padding:.5rem .3rem;text-align:center;transition:all .25s;position:relative;overflow:hidden}
+    .tier::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--sand));opacity:0;transition:opacity .25s}
+    .tier.active{border-color:var(--orange);box-shadow:0 6px 20px -6px rgba(223,123,62,.3)}
+    .tier.active::before{opacity:1}
+    .tier-n{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--dark);line-height:1}
+    .tier-lbl{font-size:.58rem;color:var(--darkmd);opacity:.4;margin-bottom:.3rem}
+    .tier-p{font-size:.95rem;font-weight:600;color:var(--orange)}
+    .tier-cu{font-size:.56rem;color:var(--darkmd);opacity:.4;margin-bottom:.3rem}
+    .tier-t{font-size:.62rem;font-weight:600;background:var(--creamdk);border-radius:999px;padding:.1rem .45rem;color:var(--darkmd);display:inline-block}
+    .tier-badge{position:absolute;top:.3rem;right:.3rem;background:var(--orange);color:#fff;font-size:.48rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.1rem .35rem;border-radius:999px}
+
+    /* INCENTIVO */
+    .incentive{margin:.75rem 1rem 0;padding:.65rem .9rem;background:linear-gradient(135deg,rgba(223,123,62,.1),rgba(232,180,109,.15));border:1px solid rgba(223,123,62,.25);border-radius:10px;display:flex;align-items:flex-start;gap:.5rem;font-size:.8rem;color:var(--darkmd);line-height:1.45}
+    .incentive-icon{font-size:.9rem;flex-shrink:0;margin-top:.05rem}
+    .incentive strong{color:var(--orange)}
+/* CONTENT WRAP */
+.content-wrap{display:block;padding:0}
+    /* SECCIÓN PLANTS */
+    .section-hd{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem .5rem}
+    .section-hd h2{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--dark)}
+    .section-hd span{font-size:.72rem;color:var(--darkmd);opacity:.5}
+    .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;padding:0 1rem}
+
+    /* CARD */
+    .card{background:var(--white);border-radius:14px;border:2px solid rgba(232,180,109,.2);overflow:hidden;transition:border-color .2s,box-shadow .2s;opacity:0;transform:translateY(10px);animation:fu .3s ease forwards}
+    @keyframes fu{to{opacity:1;transform:translateY(0)}}
+    .card.sel{border-color:var(--orange);box-shadow:0 4px 16px -6px rgba(223,123,62,.3)}
+    .card-img{position:relative;aspect-ratio:1;overflow:hidden;background:var(--creamdk);cursor:pointer}
+    .card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+    .card:hover .card-img img{transform:scale(1.05)}
+    /* Overlay "Ver detalles" */
+    .card-overlay{
+      position:absolute;inset:0;
+      background:rgba(42,20,8,.45);
+      display:flex;align-items:center;justify-content:center;
+      opacity:0;transition:opacity .25s;
+    }
+    .card-img:hover .card-overlay{opacity:1}
+    .card-overlay-btn{
+      background:rgba(255,255,255,.92);
+      color:var(--dark);
+      font-size:.72rem;font-weight:600;
+      padding:.4rem .85rem;border-radius:999px;
+      display:flex;align-items:center;gap:.3rem;
+      pointer-events:none;
+    }
+    .qb{position:absolute;top:.45rem;right:.45rem;min-width:24px;height:24px;border-radius:999px;background:var(--orange);color:#fff;font-size:.72rem;font-weight:700;display:none;align-items:center;justify-content:center;padding:0 .4rem;box-shadow:0 2px 8px rgba(223,123,62,.45)}
+    .qb.on{display:flex}
+    .card-body{padding:.55rem .7rem .65rem}
+    .card-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:.05rem}
+    .card-latin{font-size:.58rem;color:var(--darkmd);opacity:.45;font-style:italic;margin-bottom:.2rem}
+    /* Botón ver detalles en la card */
+    .card-detail-btn{
+      font-size:.68rem;font-weight:500;
+      color:var(--orange);
+      background:none;border:none;padding:0;
+      cursor:pointer;text-decoration:underline;
+      margin-bottom:.3rem;
+      display:block;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .card-price{font-size:.75rem;font-weight:600;color:var(--orange);margin-bottom:.45rem}
+    .ctrl-row{display:flex;align-items:center;gap:.4rem}
+    .cb{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(94,38,26,.2);background:var(--cream);color:var(--dark);font-size:.9rem;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+    .cb:active{transform:scale(.92)}
+    .cb.plus{background:var(--orange);border-color:var(--orange);color:#fff}
+    .cn{min-width:24px;text-align:center;font-size:.88rem;font-weight:600;color:var(--dark)}
+
+    /* ══════════════════════════════════
+       MODAL DE DETALLES
+    ══════════════════════════════════ */
+    .modal-overlay{
+      position:fixed;inset:0;z-index:600;
+      background:rgba(42,20,8,.6);
+      backdrop-filter:blur(4px);
+      display:flex;align-items:flex-end;justify-content:center;
+      opacity:0;pointer-events:none;
+      transition:opacity .3s ease;
+    }
+    .modal-overlay.open{opacity:1;pointer-events:all}
+
+    .modal{
+      background:var(--white);
+      border-radius:22px 22px 0 0;
+      width:100%;max-width:560px;
+      max-height:90vh;
+      overflow-y:auto;
+      transform:translateY(100%);
+      transition:transform .35s cubic-bezier(.4,0,.2,1);
+      position:relative;
+      scrollbar-width:thin;
+      scrollbar-color:var(--sand) transparent;
+    }
+    .modal::-webkit-scrollbar{width:4px}
+    .modal::-webkit-scrollbar-track{background:transparent;margin:16px}
+    .modal::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--orange),var(--sand));border-radius:999px}
+    .modal::-webkit-scrollbar-thumb:hover{background:var(--orange)}
+    .modal-overlay.open .modal{transform:translateY(0)}
+
+    /* Handle */
+    .modal-handle{
+      width:40px;height:4px;border-radius:999px;
+      background:rgba(94,38,26,.15);
+      margin:0.75rem auto 0;
+    }
+
+    /* Botón cerrar */
+    .modal-close{
+      position:absolute;top:.75rem;right:.9rem;
+      width:32px;height:32px;border-radius:50%;
+      border:1.5px solid rgba(94,38,26,.15);
+      background:var(--cream);
+      color:var(--darkmd);
+      font-size:1.1rem;line-height:1;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;z-index:2;
+      -webkit-tap-highlight-color:transparent;
+    }
+
+    /* ── CARRUSEL DEL MODAL ── */
+    .carousel{
+      position:relative;
+      width:100%;
+      aspect-ratio:4/3;
+      overflow:hidden;
+      margin-top:.5rem;
+      background:var(--creamdk);
+    }
+    .carousel-track{
+      display:flex;
+      height:100%;
+      transition:transform .35s cubic-bezier(.4,0,.2,1);
+    }
+    .carousel-slide{
+      min-width:100%;height:100%;flex-shrink:0;
+    }
+    .carousel-slide img{
+      width:100%;height:100%;
+      object-fit:contain;display:block;
+      background:var(--creamdk);
+    }
+    /* Flechas */
+    .carousel-btn{
+      position:absolute;top:50%;transform:translateY(-50%);
+      width:34px;height:34px;border-radius:50%;
+      background:rgba(255,255,255,.88);
+      border:none;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.15);
+      z-index:2;
+      -webkit-tap-highlight-color:transparent;
+      transition:background .15s,transform .15s;
+    }
+    .carousel-btn:active{background:#fff;transform:translateY(-50%) scale(.93)}
+    .carousel-btn.prev{left:.65rem}
+    .carousel-btn.next{right:.65rem}
+    .carousel-btn svg{width:16px;height:16px;color:var(--dark)}
+    /* Puntos */
+    .carousel-dots{
+      position:absolute;bottom:.6rem;left:50%;transform:translateX(-50%);
+      display:flex;gap:.4rem;
+    }
+    .carousel-dot{
+      width:6px;height:6px;border-radius:50%;
+      background:rgba(255,255,255,.5);
+      transition:background .2s,transform .2s;
+      cursor:pointer;
+    }
+    .carousel-dot.active{background:#fff;transform:scale(1.3)}
+    /* Contador foto */
+    .carousel-counter{
+      position:absolute;top:.6rem;left:.7rem;
+      background:rgba(0,0,0,.4);color:#fff;
+      font-size:.65rem;font-weight:600;
+      padding:.2rem .55rem;border-radius:999px;
+    }
+
+    /* Contenido */
+    .modal-content{padding:1.25rem 1.25rem 0}
+    .modal-eyebrow{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:.3rem}
+    .modal-name{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--dark);line-height:1.1;margin-bottom:.15rem}
+    .modal-latin{font-size:.75rem;font-style:italic;color:var(--darkmd);opacity:.55;margin-bottom:.75rem}
+
+    .modal-desc{font-size:.88rem;line-height:1.7;color:var(--darkmd);opacity:.85;margin-bottom:1.1rem}
+
+    /* Características rápidas */
+    .modal-traits{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:.5rem;margin-bottom:1.1rem;
+    }
+    .trait{
+      background:var(--cream);border-radius:10px;
+      padding:.6rem .5rem;text-align:center;
+      border:1px solid rgba(232,180,109,.25);
+    }
+    .trait-icon{font-size:1.1rem;margin-bottom:.2rem}
+    .trait-label{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--darkmd);opacity:.5;margin-bottom:.1rem}
+    .trait-val{font-size:.78rem;font-weight:600;color:var(--dark)}
+
+    /* Consejos cultivo */
+    .modal-tips-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.15rem;font-weight:700;
+      color:var(--dark);margin-bottom:.6rem;
+    }
+    .tip-list{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.25rem}
+    .tip{
+      display:flex;align-items:flex-start;gap:.6rem;
+      padding:.6rem .8rem;
+      background:var(--cream);border-radius:10px;
+      border-left:3px solid var(--orange);
+      font-size:.82rem;color:var(--darkmd);line-height:1.5;
+    }
+    .tip-icon{font-size:.95rem;flex-shrink:0;margin-top:.05rem}
+
+    /* Acción agregar desde modal */
+    .modal-actions{
+      position:sticky;bottom:0;
+      background:var(--white);
+      padding:1rem 1.25rem 1.25rem;
+      border-top:1px solid rgba(232,180,109,.2);
+      display:flex;align-items:center;gap:.75rem;
+    }
+    .modal-price-box{flex:1}
+    .modal-price-label{font-size:.65rem;color:var(--darkmd);opacity:.55;margin-bottom:.05rem}
+    .modal-price-val{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--orange);line-height:1}
+    .modal-price-unit{font-size:.6rem;color:var(--darkmd);opacity:.45}
+
+    .modal-ctrl{display:flex;align-items:center;gap:.5rem}
+    .mcb{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(94,38,26,.2);background:var(--cream);color:var(--dark);font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+    .mcb:active{transform:scale(.9)}
+    .mcb.plus{background:var(--orange);border-color:var(--orange);color:#fff}
+    .mcn{min-width:28px;text-align:center;font-size:1rem;font-weight:700;color:var(--dark)}
+
+    /* ══════════════════════════════════
+       DRAWER DESPLEGABLE (MÓVIL)
+    ══════════════════════════════════ */
+    .drawer{position:fixed;bottom:0;left:0;right:0;z-index:400;border-radius:20px 20px 0 0;overflow:hidden;box-shadow:0 -8px 40px -8px rgba(42,20,8,.3)}
+    .drawer-tab{padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;background:var(--orange);transition:background .3s;-webkit-tap-highlight-color:transparent;user-select:none;position:relative}
+    .drawer-tab.ready{background:var(--wa)}
+    .drawer-tab::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:20px 20px 0 0;background:rgba(255,255,255,.15);opacity:0;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:0}50%{opacity:1}}
+    .tab-left{display:flex;align-items:center;gap:.7rem}
+    .tab-badge{background:rgba(0,0,0,.25);color:#fff;font-size:.85rem;font-weight:700;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid rgba(255,255,255,.4)}
+    .tab-info{}
+    .tab-title{font-size:.88rem;font-weight:600;color:#fff;line-height:1.2}
+    .tab-sub{font-size:.68rem;color:rgba(255,255,255,.8);line-height:1;margin-top:.1rem}
+    .tab-right{display:flex;align-items:center;gap:.6rem}
+    .tab-total-wrap{text-align:right}
+    .tab-total-lbl{font-size:.6rem;color:rgba(255,255,255,.7);line-height:1;margin-bottom:.1rem}
+    .tab-total-val{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#fff;line-height:1}
+    .tab-arrow{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid rgba(255,255,255,.35);transition:background .2s}
+    .tab-arrow svg{transition:transform .35s ease}
+    .drawer.open .tab-arrow svg{transform:rotate(180deg)}
+    .drawer-body{background:var(--white);max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+    .drawer.open .drawer-body{max-height:65vh;overflow-y:auto}
+    .drawer-inner{padding:.85rem 1rem 0}
+    #drawerItems{max-height:162px;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    #drawerItems::-webkit-scrollbar{display:none}
+    .drawer-section-title{font-size:.62rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--darkmd);opacity:.5;margin-bottom:.5rem}
+    .drawer-empty{text-align:center;padding:1.25rem 0;font-size:.8rem;color:var(--darkmd);opacity:.4;font-style:italic}
+    .d-item{display:flex;align-items:center;gap:.6rem;padding:.45rem 0;border-bottom:1px solid rgba(232,180,109,.15)}
+    .d-item:last-child{border-bottom:none}
+    .d-img{width:38px;height:38px;border-radius:9px;object-fit:cover;background:var(--creamdk);flex-shrink:0}
+    .d-name{flex:1;font-size:.82rem;font-weight:500;color:var(--dark);line-height:1.3}
+    .d-qty{color:var(--orange);font-weight:700;font-size:.85rem;min-width:26px;text-align:right}
+    .d-price{font-size:.72rem;color:var(--darkmd);opacity:.55;min-width:42px;text-align:right}
+    .drawer-tots{margin:.85rem 1rem 0;padding:.8rem;background:var(--cream);border-radius:12px;border:1px solid rgba(232,180,109,.25)}
+    .d-tr{display:flex;justify-content:space-between;font-size:.8rem;color:var(--darkmd);opacity:.7;margin-bottom:.3rem}
+    .d-tr.main{font-size:1rem;font-weight:700;color:var(--dark);opacity:1;border-top:1px solid rgba(232,180,109,.35);padding-top:.5rem;margin-top:.4rem;margin-bottom:0}
+    .d-tr.main span:last-child{color:var(--orange)}
+    .drawer-actions{padding:.85rem 1rem 1rem}
+    .d-bwa{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;padding:.88rem 1rem;background:var(--wa);color:#fff;border:none;border-radius:13px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;box-shadow:0 5px 20px -5px rgba(37,211,102,.5);transition:background .2s,transform .15s;-webkit-tap-highlight-color:transparent}
+    .d-bwa:not(:disabled):active{transform:scale(.98);background:var(--wadk)}
+    .d-bwa:disabled{background:var(--creamdk);color:rgba(94,38,26,.35);box-shadow:none;cursor:not-allowed}
+    .d-reset{display:flex;align-items:center;justify-content:center;margin-top:.5rem;padding:.5rem;font-family:'DM Sans',sans-serif;font-size:.75rem;color:var(--darkmd);opacity:.5;background:none;border:none;cursor:pointer;width:100%}
+    .d-hint{text-align:center;font-size:.7rem;color:var(--darkmd);opacity:.5;padding:.35rem 1rem .5rem;line-height:1.4}
+    .d-hint.ready{color:var(--green);opacity:1;font-weight:500}
+
+    /* PANEL DESKTOP */
+    .desktop-panel{display:none}
+
+    @media(min-width:768px){
+      body{padding-bottom:2rem}
+      .drawer{display:none}
+      .hero{padding-top:90px}
+      .pricing{overflow:visible}
+      .pricing-row{min-width:0}
+      .content-wrap{max-width:1240px;margin:1.5rem auto 0;display:grid;grid-template-columns:1fr 310px;gap:1.75rem;padding:0 1.5rem 4rem;align-items:start}
+      .section-hd{padding:.5rem 0 .75rem}
+      .pgrid{padding:0;grid-template-columns:repeat(2,1fr);gap:1rem}
+      /* Modal en desktop: centrado */
+      .modal-overlay{align-items:center}
+      .modal{border-radius:22px;max-height:85vh}
+      .modal-overlay.open .modal{transform:translateY(0)}
+      .desktop-panel{
+        display:block;
+        position:sticky;top:80px;
+        background:var(--white);border-radius:18px;
+        border:1px solid rgba(232,180,109,.3);
+        box-shadow:0 16px 48px -16px rgba(42,20,8,.1);
+        overflow-y:auto;
+        max-height:calc(100vh - 100px);
+        scrollbar-width:thin;
+        scrollbar-color:var(--sand) transparent;
+      }
+      .desktop-panel::-webkit-scrollbar{width:4px}
+      .desktop-panel::-webkit-scrollbar-track{background:transparent;margin:12px}
+      .desktop-panel::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--orange),var(--sand));border-radius:999px}
+      .desktop-panel::-webkit-scrollbar-thumb:hover{background:var(--orange)}
+      .dp-head{padding:1.1rem 1.25rem .85rem;border-bottom:1px solid rgba(232,180,109,.2);background:linear-gradient(135deg,rgba(232,180,109,.12),transparent)}
+      .dp-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--dark)}
+      .dp-sub{font-size:.7rem;color:var(--darkmd);opacity:.55;margin-top:.1rem}
+      .dp-precio{margin:.9rem 1.25rem 0;padding:.7rem 1rem;background:var(--cream);border-radius:10px;border:1px solid rgba(232,180,109,.3);display:flex;align-items:center;justify-content:space-between}
+      .dp-plbl{font-size:.7rem;color:var(--darkmd);opacity:.6}
+      .dp-ptier{font-size:.62rem;color:var(--darkmd);opacity:.45;margin-top:.1rem}
+      .dp-pval{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--orange);line-height:1}
+      .dp-punit{font-size:.6rem;color:var(--darkmd);opacity:.4}
+      .dp-prog{padding:.85rem 1.25rem;border-bottom:1px solid rgba(232,180,109,.2)}
+      .dp-plbls{display:flex;justify-content:space-between;font-size:.68rem;color:var(--darkmd);opacity:.65;margin-bottom:.4rem}
+      .dp-plbls span:last-child{font-weight:600;color:var(--orange)}
+      .dp-track{height:5px;background:var(--creamdk);border-radius:999px;overflow:hidden}
+      .dp-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--sand));border-radius:999px;transition:width .3s;width:0%}
+      .dp-msg{font-size:.68rem;margin-top:.35rem;color:var(--darkmd);opacity:.55}
+      .dp-msg.ok{color:var(--green);opacity:1;font-weight:500}
+      .dp-list{padding:.6rem 1.25rem;max-height:180px;overflow-y:auto;border-bottom:1px solid rgba(232,180,109,.2);scrollbar-width:thin;scrollbar-color:var(--sand) transparent}
+      .dp-list::-webkit-scrollbar{width:3px}
+      .dp-list::-webkit-scrollbar-track{background:transparent;margin:6px}
+      .dp-list::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--orange),var(--sand));border-radius:999px}
+      .dp-list::-webkit-scrollbar-thumb:hover{background:var(--orange)}
+      .dp-empty{text-align:center;padding:1.25rem 0;font-size:.75rem;color:var(--darkmd);opacity:.4;font-style:italic}
+      .dp-item{display:flex;align-items:center;gap:.5rem;padding:.4rem 0;border-bottom:1px solid rgba(232,180,109,.12);font-size:.75rem}
+      .dp-item:last-child{border-bottom:none}
+      .dp-iimg{width:30px;height:30px;border-radius:7px;object-fit:cover;background:var(--creamdk);flex-shrink:0}
+      .dp-iname{flex:1;color:var(--dark);font-weight:500;line-height:1.3}
+      .dp-iqty{color:var(--orange);font-weight:700}
+      .dp-iprice{color:var(--darkmd);opacity:.55;font-size:.68rem}
+      .dp-tots{padding:.85rem 1.25rem;border-bottom:1px solid rgba(232,180,109,.2)}
+      .dp-tr{display:flex;justify-content:space-between;font-size:.77rem;color:var(--darkmd);opacity:.7;margin-bottom:.3rem}
+      .dp-tr.main{font-size:.95rem;font-weight:600;color:var(--dark);opacity:1;border-top:1px solid rgba(232,180,109,.3);padding-top:.5rem;margin-top:.4rem;margin-bottom:0}
+      .dp-tr.main span:last-child{color:var(--orange)}
+      .dp-acts{padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.5rem}
+      .dp-bwa{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1rem;background:var(--wa);color:#fff;border:none;border-radius:11px;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:500;cursor:pointer;transition:background .2s,transform .2s;box-shadow:0 5px 18px -5px rgba(37,211,102,.4)}
+      .dp-bwa:hover:not(:disabled){background:var(--wadk);transform:translateY(-1px)}
+      .dp-bwa:disabled{background:var(--creamdk);color:rgba(94,38,26,.3);box-shadow:none;cursor:not-allowed}
+      .dp-reset{display:flex;align-items:center;justify-content:center;padding:.6rem 1rem;background:transparent;border:1px solid rgba(94,38,26,.15);border-radius:9px;font-family:'DM Sans',sans-serif;font-size:.75rem;color:var(--darkmd);opacity:.55;cursor:pointer;transition:opacity .2s,border-color .2s}
+      .dp-reset:hover{opacity:1;border-color:var(--orange)}
+      .dp-note{text-align:center;font-size:.65rem;color:var(--darkmd);opacity:.45;padding:0 1.25rem .9rem;line-height:1.5}
+      .nav{height:70px}.nav img{height:50px}
+    }
+    @media(min-width:1024px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html"><img src="https://i.postimg.cc/fymrSRpK/oie-transparent-(1).png" alt="Cactus Desert" width="260" height="88" loading="eager" style="height:88px;width:auto"/></a>
+  <a href="index.html#paquetes" class="nav-back">← Ver paquetes</a>
+</nav>
+
+<div class="hero">
+  <p class="hero-ey">Paquete personalizado · Ecuador</p>
+  <h1>Arma tu paquete<br><em>de suculentas</em></h1>
+  <p class="hero-sub">Elige exactamente qué plantas quieres. <strong>Entre más escoges, menos pagas por cada una.</strong> Envío $7 a todo Ecuador.</p>
+</div>
+
+<div class="pricing">
+  <p class="pricing-label">Precio por planta según cantidad</p>
+  <div class="pricing-row">
+    <div class="tier" id="tier6"><p class="tier-n">6</p><p class="tier-lbl">plantas</p><p class="tier-p">$4.50</p><p class="tier-cu">por planta</p><p class="tier-t">$27</p></div>
+    <div class="tier" id="tier9"><p class="tier-n">9</p><p class="tier-lbl">plantas</p><p class="tier-p">$4.00</p><p class="tier-cu">por planta</p><p class="tier-t">$36</p></div>
+    <div class="tier" id="tier12"><p class="tier-n">12</p><p class="tier-lbl">plantas</p><p class="tier-p">$3.50</p><p class="tier-cu">por planta</p><p class="tier-t">$42</p></div>
+    <div class="tier" id="tier16"><p class="tier-n">16</p><p class="tier-lbl">plantas</p><p class="tier-p">$3.00</p><p class="tier-cu">por planta</p><p class="tier-t">$48</p></div>
+    <div class="tier" id="tier20"><span class="tier-badge">Mejor precio</span><p class="tier-n">20+</p><p class="tier-lbl">plantas</p><p class="tier-p">$2.50</p><p class="tier-cu">por planta</p><p class="tier-t">desde $50</p></div>
+  </div>
+</div>
+
+<div class="incentive">
+  <span class="incentive-icon">💡</span>
+  <span id="incText">Agrega al menos <strong>6 plantas</strong> para comenzar a <strong>$4.50 c/u</strong></span>
+</div>
+
+<div class="content-wrap">
+  <div>
+    <div class="section-hd"><h2>Elige tus suculentas</h2><span>20 variedades</span></div>
+    <div class="pgrid" id="pgrid"></div>
+  </div>
+
+  <div class="desktop-panel">
+    <div class="dp-head"><p class="dp-title">Tu paquete</p><p class="dp-sub">Mínimo 6 plantas para pedir</p></div>
+    <div class="dp-precio">
+      <div><p class="dp-plbl">Precio actual</p><p class="dp-ptier" id="dpTier">Agrega 6 plantas</p></div>
+      <div style="text-align:right"><p class="dp-pval" id="dpVal">—</p><p class="dp-punit">por planta</p></div>
+    </div>
+    <div class="dp-prog">
+      <div class="dp-plbls"><span>Plantas</span><span id="dpCount">0/6</span></div>
+      <div class="dp-track"><div class="dp-fill" id="dpFill"></div></div>
+      <p class="dp-msg" id="dpMsg">Agrega al menos 6 suculentas</p>
+    </div>
+    <div class="dp-list" id="dpList"><p class="dp-empty">Todavía no has seleccionado plantas</p></div>
+    <div class="dp-tots">
+      <div class="dp-tr"><span>Plantas</span><span id="dpN">0</span></div>
+      <div class="dp-tr"><span>Precio c/u</span><span id="dpU">—</span></div>
+      <div class="dp-tr"><span>Subtotal</span><span id="dpS">$0.00</span></div>
+      <div class="dp-tr"><span>Envío</span><span>$7.00</span></div>
+      <div class="dp-tr main"><span>Total</span><span id="dpT">$7.00</span></div>
+    </div>
+    <div class="dp-acts">
+      <button class="dp-bwa" id="dpBtnWa" disabled>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.528 5.855L.057 23.09a.75.75 0 00.906.921l5.347-1.477A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.25-1.376l-.374-.217-3.882 1.072 1.036-3.777-.233-.388A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Pedir por WhatsApp
+      </button>
+      <button class="dp-reset" id="dpReset">Limpiar selección</button>
+    </div>
+    <p class="dp-note">Mínimo 6 · Entre más escoges, menos pagas · Envío $7</p>
+  </div>
+</div>
+
+<!-- DRAWER MÓVIL -->
+<div class="drawer" id="drawer">
+  <div class="drawer-tab" id="drawerTab">
+    <div class="tab-left">
+      <div class="tab-badge" id="tabBadge">0</div>
+      <div class="tab-info">
+        <p class="tab-title" id="tabTitle">👆 Toca para ver tu pedido</p>
+        <p class="tab-sub" id="tabSub">Selecciona mínimo 6 plantas</p>
+      </div>
+    </div>
+    <div class="tab-right">
+      <div class="tab-total-wrap">
+        <p class="tab-total-lbl">Total c/envío</p>
+        <p class="tab-total-val" id="tabTotal">$7.00</p>
+      </div>
+      <div class="tab-arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-body" id="drawerBody">
+    <div class="drawer-inner">
+      <p class="drawer-section-title">Plantas seleccionadas</p>
+      <div id="drawerItems"><p class="drawer-empty">Todavía no has seleccionado plantas</p></div>
+    </div>
+    <div class="drawer-tots">
+      <div class="d-tr"><span>Plantas</span><span id="dN">0</span></div>
+      <div class="d-tr"><span>Precio c/u</span><span id="dU">—</span></div>
+      <div class="d-tr"><span>Subtotal</span><span id="dS">$0.00</span></div>
+      <div class="d-tr"><span>Envío Ecuador</span><span>$7.00</span></div>
+      <div class="d-tr main"><span>Total</span><span id="dT">$7.00</span></div>
+    </div>
+    <div class="drawer-actions">
+      <button class="d-bwa" id="dBtnWa" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.528 5.855L.057 23.09a.75.75 0 00.906.921l5.347-1.477A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.25-1.376l-.374-.217-3.882 1.072 1.036-3.777-.233-.388A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Pedir por WhatsApp
+      </button>
+      <button class="d-reset" id="dReset">🗑️ Limpiar selección</button>
+    </div>
+    <p class="d-hint" id="dHint">Selecciona mínimo 6 plantas para pedir</p>
+  </div>
+</div>
+
+<!-- MODAL DE DETALLES -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <div class="modal-handle"></div>
+    <button class="modal-close" id="modalClose">×</button>
+
+    <!-- CARRUSEL -->
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="carouselTrack"></div>
+      <button class="carousel-btn prev" id="carouselPrev" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn next" id="carouselNext" aria-label="Foto siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <span class="carousel-counter" id="carouselCounter">1 / 1</span>
+    </div>
+    <div class="modal-content">
+      <p class="modal-eyebrow" id="modalEyebrow">Suculenta</p>
+      <p class="modal-name" id="modalName">—</p>
+      <p class="modal-latin" id="modalLatin">—</p>
+      <p class="modal-desc" id="modalDesc">—</p>
+      <div class="modal-traits" id="modalTraits"></div>
+      <p class="modal-tips-title">Consejos de cultivo</p>
+      <div class="tip-list" id="modalTips"></div>
+    </div>
+    <div class="modal-actions">
+      <div class="modal-price-box">
+        <p class="modal-price-label">Precio actual</p>
+        <p class="modal-price-val" id="modalPriceVal">$4.50</p>
+        <p class="modal-price-unit">por planta</p>
+      </div>
+      <div class="modal-ctrl">
+        <button class="mcb" id="mMinus">−</button>
+        <span class="mcn" id="mQty">0</span>
+        <button class="mcb plus" id="mPlus">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const WA="593968691551",ENVIO=7,MIN=6;
+  const TRAMOS=[
+    {min:20,precio:2.50,id:"tier20"},
+    {min:16,precio:3.00,id:"tier16"},
+    {min:12,precio:3.50,id:"tier12"},
+    {min:9, precio:4.00,id:"tier9"},
+    {min:6, precio:4.50,id:"tier6"},
+  ];
+  function getT(n){for(const t of TRAMOS)if(n>=t.min)return t;return TRAMOS[4]}
+  function getSig(n){const a=[...TRAMOS].reverse();const i=a.findIndex(t=>n>=t.min);return i>0?a[i-1]:null}
+
+  // Datos completos de cada suculenta
+  const plantas=[
+    {id:1,latin:"Echeveria Chocolate Mousse",
+     imgs:["https://i.postimg.cc/CM2QVf80/1.png","https://i.postimg.cc/0yRXzRcx/2.png"],
+     desc:"La 'Mousse de Chocolate' es una suculenta de tamaño mediano que forma rosetas compactas y simétricas. Sus hojas tienen un rico tono marrón chocolate , que puede variar entre bronce oscuro y burdeos intenso, dependiendo de la exposición al sol. A diferencia de las Echeverias azuladas más comunes, esta variedad tiene un acabado satinado , casi metálico.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Directa o semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"10°C - 35°C"}],
+     tips:["☀️ Necesita al menos 4-6 horas de luz al día. En interior colócala junto a la ventana más soleada.","💧 Riega solo cuando el sustrato esté completamente seco. El exceso de agua es su mayor enemigo.","🌱 Usa sustrato especial para cactus y suculentas — el suelo común retiene demasiada humedad.","🚫 Evita mojar el centro de la roseta. El agua acumulada puede pudrir la planta desde adentro."]},
+
+    {id:2,latin:"Crassula Atropurpurea",
+     imgs:["https://i.postimg.cc/D0CWtT0F/3.png","https://i.postimg.cc/bNBDgpKw/4.png"],
+     desc:"Crassula atropurpurea var es una pieza esencial para cualquier aficionado a las suculentas que busque geometría y color en un solo ejemplar. Conocida por sus hojas carnosas, esta planta crece de forma compacta, como un arbusto, creando una estructura visualmente fascinante. Su mayor virtud es su mutabilidad : bajo la luz solar directa o a temperaturas más frías, el verde grisáceo de sus hojas se transforma en un púrpura intenso o un burdeos vibrante , lo que la convierte en un verdadero camaleón en el jardín.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Semisombra a pleno sol"},{icon:"💧",lbl:"Riego",val:"Cada 14-21 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 32°C"}],
+     tips:["☀️ Tolera bien la luz indirecta pero alcanza su mejor color con sol directo matutino.","💧 Riego moderado. Deje que el sustrato se seque completamente entre riegos.","🏠 Excelente planta de interior con luz del sol. Puede vivir bien en espacios con luz indirecta del sol, es decir, cerca de una ventana.","✂️ Si crece mucho puedes podarla sin problemas — los cortes se convierten en nuevas plantas."]},
+
+    {id:3,latin:"Greenovia Aurea variegata",
+     imgs:["https://i.postimg.cc/QxJsNbJf/5.png","https://i.postimg.cc/1zfZHZhr/6.png"],
+     desc:"La Greenovia aurea variegata es una suculenta poco común originaria de las Islas Canarias; imita a la perfección la floración de una rosa, pero con la delicadeza de una acuarela gracias a sus tonos variados. Su característica más fascinante es su ciclo de dormancia. En invierno, las rosetas se abren en tonos verde menta; en verano, para protegerse del calor, se cierran herméticamente, convirtiéndose en perfectos capullos de rosa .",
+     traits:[{icon:"☀️",lbl:"Luz",val:"sol indirecto"},{icon:"💧",lbl:"Riego",val:"Cada 7-10 días"},{icon:"🌡️",lbl:"Temperatura",val:"8°C - 35°C"}],
+     tips:["🌈 Prefiere la luz brillante e indirecta. El sol directo del mediodía puede quemar sus bordes variegados, que son más sensibles que los verdes","💧 Riego moderado en invierno, muy escaso en verano.","🪴 Prefiere los climas frescos. Si la temperatura sube demasiado, entra en letargo; respeta este descanso y no intentes despertarla con demasiada agua","🌱 Se propaga por hoja — cualquier hoja caída puede convertirse en una nueva planta."]},
+
+    {id:4,latin:"Echeveria Ice-Soul",
+     imgs:["https://i.postimg.cc/rpLSGqrd/9.png","https://i.postimg.cc/X7GFTrfz/10.png"],
+     desc:"La Echeveria 'Ice-Soul' Monstruosa es una planta suculenta que rompe con la simetría tradicional para ofrecer una apariencia exótica, que recuerda a las formaciones de hielo cristalizado y a los arrecifes de coral del Ártico.  a diferencia de las rosetas comunes, esta mutación presenta un crecimiento irregular y fascinante, con hojas que se fusionan, se retuercen y crean  protuberancias únicas en cada ejemplar. Exhibe una paleta de colores fríos que van desde el azul glacial hasta el verde menta y el rosa , lo que le confiere a la planta un aura mística y refrescante. Bajo un estrés térmico o solar intenso, los bordes y puntas irregulares de sus crestas pueden adquirir tonalidades de rosa pálido o lila , creando un magnífico contraste con el cuerpo gélido de la planta.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Pleno sol indirecto"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"8°C - 38°C"}],
+     tips:["☀️ Prefiere luz solar directa filtrada de alta intensidad. La luz intensa es esencial para mantener el color azulado y la capa de pruina, pero debe evitarse la luz solar directa del mediodía para evitar que los tejidos se cocinen.","💧 Sigue la regla para las suculentas: riega solo cuando la tierra esté completamente seca . Debido a su forma compacta e irregular, evita que se acumule agua entre riegos para prevenir la pudrición.","❄️ Protégela de las heladas. Agradece ambientes con excelente circulación de aire, lo cual es esencial para prevenir plagas ocultas en sus complejas formas."]},
+
+    {id:5,latin:"Sedum Commixtum",
+     imgs:["https://i.postimg.cc/rpLSGqrd/9.png","https://i.postimg.cc/X7GFTrfz/10.png"],
+     desc:"Les presentamos Sedum Commixtum , una planta suculenta de aspecto robusto y colores suaves, que recuerda a una obra de arte moldeada en cera fría. Sus hojas son extremadamente gruesas, redondeadas y cortas, y crecen densamente a lo largo de los tallos, lo que le da a la planta una apariencia escultural y táctil.  El color base es un azul grisáceo pálido, casi plateado , que aporta una sensación de frescura y elegancia a cualquier arreglo de suculentas.  Está cubierta por una generosa capa de pruina (esa cera natural), que proporciona un acabado  mate y aterciopelado , protegiendo la planta de la luz solar intensa. Bajo un estrés solar intenso o por frío, las puntas de sus hojas redondeadas se tornan de color rojo anaranjado o púrpura , creando un vibrante contraste con el cuerpo azulado de la planta.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Semisombra o interior"},{icon:"💧",lbl:"Riego",val:"Cada 14-21 días"},{icon:"🌡️",lbl:"Temperatura",val:"10°C - 30°C"}],
+     tips:["☀️ Prefiere pleno sol o luz solar directa durante varias horas. La luz intensa es el secreto para mantener la forma compacta de las rosetas y la coloración rojiza en las puntas.","💧 Sigue la regla para las suculentas: riega solo cuando la tierra esté completamente seca . Debido a sus hojas muy gruesas, almacena mucha agua y es extremadamente resistente a la sequía.", "❄️ Protéjala de las heladas intensas. Es una planta que prefiere ambientes bien ventilados y tolera bien el calor intenso, siempre que el suelo esté seco.","🌿 Utilice un sustrato con excelente drenaje , preferiblemente arenoso o con un buen contenido mineral, para evitar que se acumule humedad en la base de los tallos."]},
+
+    {id:6,latin:"Graptoveria Sakura",
+     imgs:["https://i.postimg.cc/VvBxHS0y/11.png","https://i.postimg.cc/qMpV6GSY/12.png"],
+     desc:"Les presentamos la Graptoveria 'Sakura' , una planta suculenta que captura la esencia efímera y romántica de las flores de cerezo japonesas en una roseta persistente y encantadora. Fiel a su nombre (Sakura significa flor de cerezo en japonés), este híbrido exhibe una coloración suave que transita entre el rosa bebé, el melocotón y el lavanda , creando una apariencia etérea y serena. Sus hojas regordetas y lanceoladas están generosamente cubiertas por una gruesa capa de pruina, lo que le confiere un acabado mate y satinado que protege la planta y suaviza sus colores. Con una exposición solar adecuada y el frío del invierno, los bordes de las hojas adquieren un brillo rosado más intenso , que contrasta con el suave tono azulado.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo o semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 35°C"}],
+     tips:["☀️ Prefiere luz solar directa filtrada o pleno sol matutino. La luz intensa es fundamental para mantener su característico color rosa; si se cultiva a la sombra, la planta tiende a volverse verde y a alargarse (etiolación).","💧 Sigue la regla para suculentas: riega solo cuando la tierra esté completamente seca . Evita tocar las hojas en exceso para no eliminar la pruina natural que les da un aspecto aterciopelado.","🌿 Utilice un sustrato con excelente drenaje , específicamente para cactus y suculentas, asegurándose de que el agua no se acumule en la base de la roseta."]},
+
+    {id:7,latin:"Crassula Ovata Variegata",
+     imgs:["https://i.postimg.cc/rmBpG8fv/13.png","https://i.postimg.cc/9fzXv4Kq/14.png"],
+     desc:"Les presentamos la Crassula Ovata Variegata , una planta suculenta que transforma la clásica planta del dinero en una auténtica pieza de colección gracias a su follaje variegado. Las hojas carnosas y ovaladas presentan pinceladas artísticas que varían entre un vibrante color crema, blanco puro y verde esmeralda , creando un patrón único en cada par de hojas. Bajo la luz solar directa, los bordes de las hojas variegadas adquieren un llamativo tono rosa o rojo intenso , enmarcando la planta con una vibrante intensidad. A diferencia de las rosetas bajas, esta Crassula desarrolla con el tiempo un tallo leñoso y robusto, lo que permite darle forma de árbol en miniatura lleno de personalidad. Más allá de su belleza estética, conlleva la tradición de atraer prosperidad y buenas energías, ahora con el toque sofisticado de una mutación variada.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Pleno sol"},{icon:"💧",lbl:"Riego",val:"Cada 14-21 días"},{icon:"🌡️",lbl:"Temperatura",val:"-10°C - 38°C"}],
+     tips:["🌞  Prefiere luz solar directa o luz indirecta muy brillante . La luz intensa es crucial para mantener la variegación definida y los bordes rosados; en lugares muy oscuros, las partes blancas pueden debilitarse y la planta puede perder contraste.","💧 Sigue la regla para las suculentas: riega solo cuando el sustrato esté completamente seco . Sus hojas gruesas almacenan mucha agua, por lo que tolera bien la falta de cuidados, pero detesta el exceso de humedad en las raíces.","❄️Protéjala de las heladas intensas. Agradece los ambientes bien ventilados y se adapta perfectamente tanto a jardines exteriores como a interiores bien iluminados.","👶 Produce hijuelos constantemente que puedes separar y plantar por separado."]},
+
+    {id:8,latin:"Haworthia Mordor",
+     imgs:["https://i.postimg.cc/KvX6bKKw/15.png","https://i.postimg.cc/T3dH2nRd/16.png"],
+     desc:"Les presentamos la Haworthia Mordor , una planta suculenta que cautivará a cualquier coleccionista con su aspecto crudo, oscuro y fascinante.  La parte superior de sus hojas es truncada, de color verde oscuro a negro , lo que permite que la luz penetre en el interior de la planta, recordando los paisajes áridos y rocosos de Mordor. La superficie de las hojas es rugosa y tuberculada, con patrones que se asemejan a lava enfriada o formaciones de coral , lo que le confiere un aspecto táctil y visual poco común en la familia Haworthia. A diferencia de las rosetas clásicas, 'Mordor' crece de forma compacta y lenta, formando una escultura viviente que parece haber sido forjada en condiciones extremas.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"8°C - 28°C"}],
+     tips:["🌤️  A diferencia de las Echeverias, la Haworthia prefiere luz indirecta brillante o luz solar filtrada . La luz intensa es fundamental para mantener los tonos oscuros, pero evite la luz solar directa y abrasadora para prevenir quemaduras.","💧 Sigue la regla para las suculentas: riega solo cuando la tierra esté completamente seca . Debido a su lento crecimiento, tolera bien los periodos de sequía, pero es sensible al exceso de humedad que se acumula en las raíces.","😴 Protégela de las heladas. Prefiere temperaturas suaves y ambientes con buena circulación de aire.",]},
+
+    {id:9,latin:"Haworthia Limifolia variegata",
+     imgs:["https://i.postimg.cc/63rm5cGT/17.png","https://i.postimg.cc/xjsPGBQF/18.png"],
+     desc:"La Haworthia Limifolia Variegata es conocida por sus rosetas de hojas gruesas, triangulares y rígidas que crecen formando un elegante patrón, a menudo en espiral o con forma de tabla de lavar. Lo que la hace excepcional es su llamativo patrón de variegación : las hojas de color verde oscuro y brillante están salpicadas de rayas irregulares y manchas de color amarillo cremoso o blanco puro . Esta mezcla de colores le confiere una apariencia exótica y luminosa. A diferencia de muchas suculentas que requieren sol intenso, esta Haworthia es perfecta para interiores bien iluminados , lo que la hace ideal para oficinas, escritorios o para añadir un toque de distinción a tu hogar. Es una planta de crecimiento lento , lo que significa que mantiene su forma compacta durante mucho tiempo.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo o semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 35°C"}],
+     tips:["☀️ Prefiere luz indirecta muy brillante o sombra parcial . La luz es esencial para su salud y para mantener el color de la variegación. Evite la luz solar directa e intensa, especialmente la del mediodía y la de la tarde, ya que puede quemar y amarillear irreversiblemente las partes variegadas (amarillas/blancas) de las hojas.","💧 Riegue esporádicamente , solo cuando el sustrato esté completamente seco hasta el fondo de la maceta. Tolera muy bien la sequía. Reduzca el riego en invierno."," Esta es una planta excelente para cultivar en interiores , cerca de una ventana con buena luz filtrada."]},
+
+    {id:10,latin:"Aeonium Afterglow Variegata",
+     imgs:["https://i.postimg.cc/tTDv0Tx2/19.png","https://i.postimg.cc/WzkZGYTp/20.png"],
+     desc:"Aeonium Afterglow Variegata es una mutación rara y muy codiciada de 'Afterglow'. Esta suculenta eleva la belleza a un nuevo nivel, combinando la paleta de colores de una puesta de sol intensa con la exclusividad de la variegación.  Las rosetas crean un espectáculo visual que recuerda al crepúsculo. El color base es un púrpura lavanda intenso o  un rosa amarillento intenso. El término variegada se refiere a las manchas y franjas de colores más claros —generalmente crema, amarillo o verde lima— que recorren las hojas. Este contraste tricolor maximiza el impacto visual. Los bordes de las hojas suelen estar perfilados en rojo carmesí o rosa brillante , creando un efecto de contorno que realza la forma perfecta de la roseta. Al igual que la Afterglow original , sus rosetas pueden crecer hasta alcanzar los 15-20 cm de diámetro , formando tallos delgados y elegantes que la distinguen de otras suculentas.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Pleno sol"},{icon:"💧",lbl:"Riego",val:"Cada 7-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"10°C - 38°C"}],
+     tips:["☀️ Prefiere la luz solar directa de la mañana o luz indirecta muy brillante durante el día. Una exposición solar adecuada (y el frío moderado del invierno/otoño) es lo que realza los tonos morados y rosados.","💧 Riegue abundantemente durante la temporada de crecimiento dejando que la tierra se seque por completo entre riegos.","🌿Como todos los Aeoniums , entra en dormancia durante el verano (el periodo más caluroso), cuando las rosetas se cierran para conservar la humedad. Reduzca el riego durante este tiempo y protéjalo del sol más intenso de la tarde para evitar quemaduras en las partes variegadas, que son más sensibles."]},
+
+    {id:11,latin:"Lenopetalum Chocolate",
+     imgs:["https://i.postimg.cc/SQgvnGGw/21.png","https://i.postimg.cc/mgHX6WGR/22.png"],
+     desc:"Lenophyllum 'Chocolate' es una suculenta encantadora y muy resistente, apreciada por su capacidad para adquirir ricos y profundos tonos marrones y bronce. Es una especie ideal para quienes buscan una planta de rápido crecimiento y fácil propagación, perfecta para rellenar espacios en terrarios y arreglos florales. El mayor atractivo de esta planta son sus colores. A pleno sol o en condiciones de sequía , las hojas cambian de un verde oscuro a ricos tonos de marrón chocolate, bronce y cobre , lo que le confiere un aspecto cálido y único. Presenta tallos erguidos con hojas carnosas, cilíndricas o en forma de cuchara, dispuestas de forma compacta. Con el tiempo, forma pequeños arbustos o matas. Conocido popularmente como Chocolate o, en el caso de su variedad abigarrada, 'Chocolate y fresas', debido a los tonos cálidos que desarrolla. Es increíblemente fácil de multiplicar! Las hojas se desprenden y enraízan rápidamente, y los tallos podados brotan con facilidad, lo que te permite aumentar tu colección en muy poco tiempo. Las hojas de Lenophyllum tienden a desprenderse fácilmente al tocarlas. ¡No te preocupes! Este es el mecanismo natural de propagación de la planta. Las hojas caídas se pueden usar fácilmente para cultivar nuevas plántulas. Manipúlalas con cuidado y evita tocarlas al replantarlas.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo"},{icon:"💧",lbl:"Riego",val:"Cada 14-21 días"},{icon:"🌡️",lbl:"Temperatura",val:"8°C - 35°C"}],
+     tips:["☀️ Necesita iluminación intensa. Tolera sol directo suave, lo que mejora sus colores rojizos y achocolatados.","💧 Moderado y espaciado. Regar cada 3-4 semanas en primavera/verano, o cuando el sustrato esté totalmente seco. Evitar mojar las hojas para prevenir hongos.","❄️ No tolera heladas intensas.","🌸 ¡Es increíblemente fácil de multiplicar! Las hojas se desprenden y enraízan rápidamente, y los tallos podados brotan con facilidad, lo que te permite aumentar tu colección en muy poco tiempo."]},
+
+    {id:12,latin:"Echeveria Frozen-Tips",
+     imgs:["https://i.postimg.cc/J4PHVsM7/23.png","https://i.postimg.cc/jS1W2BWr/24.png"],
+     desc:"Echeveria Frozen-Tips es otro híbrido que hemos creado. Es fácil ver que uno de sus progenitores es Echeveria Tolimanensis, de la que comparte muchas características generales. El nombre Frozen Tips (Puntas Congeladas) se debe a que sus puntas parecen congeladas o quemadas, a pesar de que este es su aspecto normal.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo a semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 35°C"}],
+     tips:["☀️ Requiere pleno sol o luz solar indirecta muy brillante para mantener la forma compacta de roseta e intensificar la coloración púrpura/roja en los bordes de las hojas. La falta de luz puede provocar etiolación (crecimiento alargado y débil).","💧 Se utiliza el método de remojar y dejar secar . Riegue abundantemente, pero solo cuando el sustrato esté completamente seco .","❄️ Se adapta bien a temperaturas suaves. Debe protegerse de las heladas y de temperaturas inferiores a 2 ° C .","🏆 Combina bien con otras suculentas por su forma y colores armoniosos."]},
+
+    {id:13,latin:"Sedum Jelly Bean Mickey",
+     imgs:["https://i.postimg.cc/GmDRPf7b/25.png","https://i.postimg.cc/vTDF42gp/26.png"],
+     desc:"El sedum 'Jelly Bean Mickey'   es una suculenta encantadora, conocida por su aspecto divertido y sus colores vibrantes. Esta variedad se caracteriza por sus hojas carnosas y redondeadas que se asemejan a pequeñas judías o gominolas. El nombre 'Mickey' proviene de la forma en que las puntas de las hojas se asemejan a pequeñas orejas bajo la exposición al sol. Su coloración es uno de sus mayores atractivos: variaciones de verde brillante, amarillo pálido y puntas que se tornan de un rosa cereza intenso o rojo brillante bajo la luz solar directa y temperaturas más frescas.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Luz brillante indirecta"},{icon:"💧",lbl:"Riego",val:"Cada 7-10 días"},{icon:"🌡️",lbl:"Temperatura",val:"15°C - 30°C"}],
+     tips:["☀️ ¡Esencial para el color! Necesita luz solar brillante y directa para mostrar los tonos rojos y rosas más intensos. A la sombra, las hojas tienden a ser más verdes.","💧 Riegue con moderación, solo cuando el sustrato esté completamente seco . Tolera muy bien la sequía, pero es sensible al exceso de riego.","❄️ Se adapta bien a temperaturas suaves. Proteger de las heladas intensas."]},
+
+    {id:14,latin:"Crassula Tom thumb variegata",
+     imgs:["https://i.postimg.cc/bJZfJFtj/27.png","https://i.postimg.cc/QNWrZwDg/28.png"],
+     desc:"La Crassula 'Tom Thumb Variegata' es una suculenta enana absolutamente adorable y encantadora, perfecta para quienes buscan una planta única de bajo crecimiento. Esta variedad variegada de la popular 'Tom Thumb' es una verdadera joya en miniatura, que forma columnas compactas de hojas triangulares superpuestas. Su principal atractivo reside en la llamativa variegación en tonos crema, amarillo pálido y rosa rojizo , que contrasta maravillosamente con el verde claro del follaje base. Es una Crassula que añade un toque delicado pero vibrante a cualquier terrario, arreglo o microcolección.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo o semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"8°C - 35°C"}],
+     tips:["☀️ Para que la Crassula Tom Thumb Variegata  mantenga su forma compacta y muestre una variegación vibrante, necesita luz solar intensa durante varias horas al día. El sol de la mañana y de la tarde es ideal. En condiciones de poca luz, la variegación puede desvanecerse y las columnas pueden alargarse.","💧  Riega con moderación y solo cuando el sustrato esté completamente seco . Es fundamental evitar el exceso de riego, sobre todo debido a su pequeño tamaño. Reduce el riego en invierno.", "🚫 No riegues directamente sobre las hojas — el agua puede dejar manchas.","🌱 Propágala por hoja o hijuelos"]},
+
+    {id:15,latin:"Echeveria Salsa Verde",
+     imgs:["https://i.postimg.cc/D0h6DSF1/29.png","https://i.postimg.cc/2StwYcrr/30.png"],
+     desc:"La Echeveria Salsa Verde es una encantadora suculenta, conocida por sus hojas de un verde vibrante y su forma compacta en roseta. Es la planta perfecta para quienes buscan añadir un toque de elegancia a cualquier espacio, ya sea un jardín de rocas, una maceta en el balcón o un terrario de interior.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"8°C - 35°C"}],
+     tips:["El polvo de sus hojas es protector — manéjala con cuidado para no borrarlo.","💧 Riega por la base cuando sea posible para preservar el color de las hojas.","📸 Es una de las suculentas más fotogénicas — su color es muy especial.","🌸 Produce flores sobre tallos largos."]},
+
+    {id:16,latin:"Echeveria Hongdeung (Coreia)",
+     imgs:["https://i.postimg.cc/43yhfVXQ/31.png","https://i.postimg.cc/L59SSBMb/32.png"],
+     desc:"La Echeveria Hongdeung es un híbrido coreano con intensos tonos rojos y una apariencia delicada que le confiere un aspecto distintivo.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Pleno sol"},{icon:"💧",lbl:"Riego",val:"Cada 21-30 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 40°C"}],
+     tips:["🌞 Necesita al menos 6 a 8 horas de luz solar directa o muy brillante al día. La falta de luz causará que la planta se estire (etiolación) y pierda su color rojo.","💧 Aplica el método de remojo y secado; riega profundamente solo cuando el sustrato esté completamente seco. Evita que el agua se acumule en el centro de la roseta para prevenir la pudrición.","❄️ Prefiere climas cálidos y no tolera las heladas. Si las temperaturas bajan de los 4-5 °C, es recomendable resguardarla en interiores."]},
+
+    {id:17,latin:"Echeveria German Champagne",
+     imgs:["https://i.postimg.cc/V6DfdH4J/33.png","https://i.postimg.cc/B6XSPBzX/34.png"],
+     desc:"Este híbrido de origen coreano es uno de los varios ejemplos de Echeveria Champagne, que se distingue por los tonos rosados ​​que se intensifican en las rosetas.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Pleno sol"},{icon:"💧",lbl:"Riego",val:"Cada 21-30 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 45°C"}],
+     tips:["📏 Crece lentamente pero puede volverse muy grande con el tiempo — planifica el espacio.","💧 Riego muy escaso — es uno de los más resistentes a la sequía de todo el catálogo.","☀️ Necesita pleno sol para crecer derecha y sana. Con poca luz se tuerce buscando la luz.","🌙 Produce flores blancas grandes que abren solo de noche en plantas adultas."]},
+
+    {id:18,latin:"Aeonium Cream-Tea",
+     imgs:["https://i.postimg.cc/qMXTRF75/35.png","https://i.postimg.cc/9QRYb6qN/36.png"],
+     desc:"Esta planta de Aeonium, también conocida como té dulce, tiene colores intensos y variados, es fácil de cuidar y produce numerosos hijuelos, ¡ideales para crear ramos perfectos!",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 35°C"}],
+     tips:["☀️ Prefiere pleno sol a sombra parcial. Es crucial protegerla del sol intenso del mediodía en verano para evitar quemaduras en las hojas.","💧 A diferencia de otras suculentas, los Aeoniums prefieren que su sustrato no permanezca completamente seco por largos periodos, pero son sensibles al exceso de agua que causa pudrición. Riega cuando los primeros 2-5 cm de tierra estén secos."]},
+
+    {id:19,latin:"Graptopetalum Purple-Delight",
+     imgs:["https://i.postimg.cc/yYY2n8j3/42.png","https://i.postimg.cc/wvgwvw4S/43.png"],
+     desc:"Fácil de cuidar y de un colorido irresistible, esta variedad aporta un toque de color a cualquier espacio. Con luz solar moderada y suelo bien drenado, florece, revelando su increíble gama de tonos púrpura.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo a semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 10-14 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 35°C"}],
+     tips:["☀️ Necesita mucha luz, preferiblemente sol directo de la mañana o luz filtrada, lo que ayuda a mantener su color intenso y forma compacta.","💧 e debe permitir que el sustrato se seque completamente entre riegos. El exceso de agua provoca pudrición.","🌸 Produce tallos con flores rosa-coral que duran semanas.","🌱 Se multiplica produciendo hijuelos alrededor de la planta madre."]},
+
+    {id:20,latin:"Pachyveria Angels fingers",
+     imgs:["https://i.postimg.cc/fT1nLh7R/44.png","https://i.postimg.cc/zfS90bsR/45.png"],
+     desc:"Creemos que se trata de otro híbrido de origen coreano; la Pachyveria angels fingers es una suculenta de aspecto delicado con tonalidades rosas y azules.",
+     traits:[{icon:"☀️",lbl:"Luz",val:"Sol directo o semisombra"},{icon:"💧",lbl:"Riego",val:"Cada 14-21 días"},{icon:"🌡️",lbl:"Temperatura",val:"5°C - 40°C"}],
+     tips:["☀️ Requiere luz brillante, desde semisombra hasta pleno sol para resaltar sus colores.","💧  Se debe regar a fondo y dejar que el sustrato se seque completamente entre riegos.","👶 Se reproduce con facilidad, principalmente a través de tres métodos: hojas, esquejes de tallo e hijuelos","🏺 Prefiere macetas de barro que permiten la respiración de las raíces."]},
+  ];
+
+  const qty={};
+  plantas.forEach(p=>qty[p.id]=0);
+
+  // Render cards — primera imagen como thumb
+  const grid=document.getElementById("pgrid");
+  plantas.forEach((p,i)=>{
+    const thumb = p.imgs[0];
+    const c=document.createElement("div");
+    c.className="card";
+    c.style.animationDelay=`${i*0.03}s`;
+    c.innerHTML=`
+      <div class="card-img" onclick="openModal(${p.id})">
+        <img src="${thumb}" alt="${p.latin}" loading="lazy" width="300" height="300"/>
+        <div class="card-overlay"><span class="card-overlay-btn">🔍 Ver detalles</span></div>
+        <span class="qb" id="qb${p.id}">1</span>
+      </div>
+      <div class="card-body">
+        <p class="card-name">${p.latin}</p>
+        <button class="card-detail-btn" onclick="openModal(${p.id})">Ver descripción y cuidados →</button>
+        <p class="card-price" id="cp${p.id}">$4.50 c/u</p>
+        <div class="ctrl-row">
+          <button class="cb" onclick="ch(${p.id},-1)">−</button>
+          <span class="cn" id="cn${p.id}">0</span>
+          <button class="cb plus" onclick="ch(${p.id},1)">+</button>
+        </div>
+      </div>`;
+    grid.appendChild(c);
+  });
+
+  // ── CARRUSEL ──
+  let carouselIdx = 0;
+  let carouselImgs = [];
+  let touchStartX = 0;
+
+  function renderCarousel() {
+    const track = document.getElementById("carouselTrack");
+    const dots  = document.getElementById("carouselDots");
+    const counter = document.getElementById("carouselCounter");
+    track.innerHTML = carouselImgs.map((src,i) =>
+      `<div class="carousel-slide"><img src="${src}" alt="Foto ${i+1}" loading="lazy"/></div>`
+    ).join("");
+    dots.innerHTML = carouselImgs.map((_,i) =>
+      `<div class="carousel-dot${i===0?" active":""}" onclick="goTo(${i})"></div>`
+    ).join("");
+    goTo(0);
+  }
+
+  function goTo(idx) {
+    carouselIdx = Math.max(0, Math.min(idx, carouselImgs.length - 1));
+    document.getElementById("carouselTrack").style.transform = `translateX(-${carouselIdx*100}%)`;
+    document.querySelectorAll(".carousel-dot").forEach((d,i) => d.classList.toggle("active", i===carouselIdx));
+    document.getElementById("carouselCounter").textContent = `${carouselIdx+1} / ${carouselImgs.length}`;
+    document.getElementById("carouselPrev").style.opacity = carouselIdx === 0 ? "0.3" : "1";
+    document.getElementById("carouselNext").style.opacity = carouselIdx === carouselImgs.length-1 ? "0.3" : "1";
+  }
+
+  document.getElementById("carouselPrev").addEventListener("click", () => goTo(carouselIdx - 1));
+  document.getElementById("carouselNext").addEventListener("click", () => goTo(carouselIdx + 1));
+
+  // Swipe táctil
+  const carousel = document.getElementById("carousel");
+  carousel.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, {passive:true});
+  carousel.addEventListener("touchend", e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(carouselIdx + (diff > 0 ? 1 : -1));
+  });
+
+  // ── MODAL ──
+  let modalPlantaId = null;
+  const overlay = document.getElementById("modalOverlay");
+  const modalClose = document.getElementById("modalClose");
+
+  function openModal(id) {
+    const p = plantas.find(x=>x.id===id);
+    if(!p) return;
+    modalPlantaId = id;
+    carouselImgs = p.imgs;
+    renderCarousel();
+
+    document.getElementById("modalEyebrow").textContent = "";
+    document.getElementById("modalName").textContent = p.latin;
+    document.getElementById("modalLatin").textContent = "";
+    document.getElementById("modalDesc").textContent = p.desc;
+    document.getElementById("modalTraits").innerHTML = p.traits.map(t=>`
+      <div class="trait">
+        <div class="trait-icon">${t.icon}</div>
+        <div class="trait-label">${t.lbl}</div>
+        <div class="trait-val">${t.val}</div>
+      </div>`).join("");
+    document.getElementById("modalTips").innerHTML = p.tips.map(t=>`
+      <div class="tip"><span>${t}</span></div>`).join("");
+
+    const n = tot();
+    const precio = n >= MIN ? getT(n).precio : 4.50;
+    document.getElementById("modalPriceVal").textContent = `$${precio.toFixed(2)}`;
+    document.getElementById("mQty").textContent = qty[id];
+
+    // Scroll al top del modal
+    document.getElementById("modal").scrollTop = 0;
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+    modalPlantaId = null;
+  }
+
+  modalClose.addEventListener("click", closeModal);
+  overlay.addEventListener("click", e => { if(e.target===overlay) closeModal(); });
+
+  document.getElementById("mMinus").addEventListener("click", () => {
+    if(modalPlantaId===null) return;
+    ch(modalPlantaId, -1);
+    document.getElementById("mQty").textContent = qty[modalPlantaId];
+  });
+  document.getElementById("mPlus").addEventListener("click", () => {
+    if(modalPlantaId===null) return;
+    ch(modalPlantaId, 1);
+    document.getElementById("mQty").textContent = qty[modalPlantaId];
+  });
+
+  // Cerrar modal con ESC
+  document.addEventListener("keydown", e => { if(e.key==="Escape") closeModal(); });
+
+  // ── DRAWER ──
+  const drawer = document.getElementById("drawer");
+  document.getElementById("drawerTab").addEventListener("click", ()=>drawer.classList.toggle("open"));
+
+  function ch(id,d){qty[id]=Math.max(0,qty[id]+d);upCard(id);upAll()}
+
+  function upCard(id){
+    const q=qty[id];
+    document.getElementById(`cn${id}`).textContent=q;
+    const b=document.getElementById(`qb${id}`);
+    b.textContent=q;b.classList.toggle("on",q>0);
+    b.closest(".card").classList.toggle("sel",q>0);
+  }
+
+  function tot(){return Object.values(qty).reduce((s,v)=>s+v,0)}
+
+  function buildMsg(n,precio,sub,totalFin){
+    const d=plantas.filter(p=>qty[p.id]>0).map(p=>`${qty[p.id]}x ${p.latin}`).join(", ");
+    return `Hola, quiero armar mi paquete personalizado:\n\n${d}\n\nTotal: ${n} plantas × $${precio.toFixed(2)} = $${sub.toFixed(2)} + $${ENVIO} envío = $${totalFin.toFixed(2)}\n\n¿Tienen disponible?`;
+  }
+
+  function upAll(){
+    const n=tot();
+    const activo=n>=MIN;
+    const tramo=getT(n);
+    const precio=activo?tramo.precio:4.50;
+    const sub=n*precio;
+    const totalFin=sub+ENVIO;
+    const sig=getSig(n);
+
+    TRAMOS.forEach(t=>{const el=document.getElementById(t.id);if(el)el.classList.toggle("active",activo&&t.id===tramo.id)});
+    plantas.forEach(p=>{const el=document.getElementById(`cp${p.id}`);if(el)el.textContent=activo?`$${precio.toFixed(2)} c/u`:"$4.50 c/u"});
+
+    // Precio en modal si está abierto
+    if(modalPlantaId!==null){
+      document.getElementById("modalPriceVal").textContent=`$${precio.toFixed(2)}`;
+    }
+
+    const inc=document.getElementById("incText");
+    if(n===0)inc.innerHTML=`Agrega al menos <strong>6 plantas</strong> para comenzar a <strong>$4.50 c/u</strong>`;
+    else if(n<MIN)inc.innerHTML=`Agrega <strong>${MIN-n} más</strong> para poder pedir a <strong>$4.50 c/u</strong>`;
+    else if(sig){const f=sig.min-n;const a=((precio-sig.precio)*n).toFixed(2);inc.innerHTML=`Agrega <strong>${f} más</strong> y baja a <strong>$${sig.precio.toFixed(2)} c/u</strong> — ahorras <strong>$${a}</strong>`}
+    else inc.innerHTML=`🎉 Tienes el <strong>mejor precio</strong> — $2.50 c/u desde 20 plantas`;
+
+    // DRAWER
+    const tab=document.querySelector(".drawer-tab");
+    tab.classList.toggle("ready",activo);
+    document.getElementById("tabBadge").textContent=n;
+    document.getElementById("tabTitle").textContent=activo?`${n} planta${n>1?"s":""} · $${precio.toFixed(2)} c/u`:"👆 Toca para ver tu pedido";
+    document.getElementById("tabTotal").textContent=`$${(activo?totalFin:ENVIO).toFixed(2)}`;
+    const tabSub=document.getElementById("tabSub");
+    if(!activo)tabSub.textContent=`Selecciona ${MIN-n} más para poder pedir`;
+    else if(sig)tabSub.textContent=`Agrega ${sig.min-n} más → $${sig.precio.toFixed(2)} c/u`;
+    else tabSub.textContent="¡Mejor precio activado! 🎉";
+
+    const sel=plantas.filter(p=>qty[p.id]>0);
+    document.getElementById("drawerItems").innerHTML=sel.length
+      ?sel.map(p=>`<div class="d-item"><img class="d-img" src="${p.imgs[0]}" alt="${p.latin}" loading="lazy"/><span class="d-name">${p.latin}</span><span class="d-qty">×${qty[p.id]}</span><span class="d-price">$${(qty[p.id]*precio).toFixed(2)}</span></div>`).join("")
+      :`<p class="drawer-empty">Todavía no has seleccionado plantas</p>`;
+
+    document.getElementById("dN").textContent=n;
+    document.getElementById("dU").textContent=activo?`$${precio.toFixed(2)}`:"—";
+    document.getElementById("dS").textContent=`$${sub.toFixed(2)}`;
+    document.getElementById("dT").textContent=`$${(activo?totalFin:ENVIO).toFixed(2)}`;
+
+    const dBtn=document.getElementById("dBtnWa");
+    dBtn.disabled=!activo;
+    const dHint=document.getElementById("dHint");
+    if(!activo){dHint.textContent=`Selecciona ${Math.max(0,MIN-n)} más para poder pedir`;dHint.className="d-hint"}
+    else if(sig){dHint.textContent=`Agrega ${sig.min-n} más → $${sig.precio.toFixed(2)} c/u`;dHint.className="d-hint"}
+    else{dHint.textContent="🎉 ¡Mejor precio activado!";dHint.className="d-hint ready"}
+    if(activo){const m=buildMsg(n,precio,sub,totalFin);dBtn.onclick=()=>window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,"_blank")}
+    else dBtn.onclick=null;
+
+    // DESKTOP PANEL
+    const dpBtn=document.getElementById("dpBtnWa");
+    if(!dpBtn)return;
+    document.getElementById("dpVal").textContent=activo?`$${precio.toFixed(2)}`:"—";
+    document.getElementById("dpTier").textContent=activo?(tramo.id==="tier20"?"Mejor precio — 20+":`Tramo ${tramo.min}+`):"Agrega 6 plantas";
+    document.getElementById("dpFill").style.width=Math.min(100,(n/MIN)*100)+"%";
+    document.getElementById("dpCount").textContent=activo?`✓${n}`:`${n}/6`;
+    const dpMsg=document.getElementById("dpMsg");
+    if(n===0){dpMsg.textContent="Agrega al menos 6 suculentas";dpMsg.className="dp-msg"}
+    else if(n<MIN){dpMsg.textContent=`Faltan ${MIN-n} plantas`;dpMsg.className="dp-msg"}
+    else{dpMsg.textContent=`¡Listo! ${n} plantas a $${precio.toFixed(2)} c/u`;dpMsg.className="dp-msg ok"}
+    const dpList=document.getElementById("dpList");
+    dpList.innerHTML=sel.length?sel.map(p=>`<div class="dp-item"><img class="dp-iimg" src="${p.imgs[0]}" alt="${p.latin}" loading="lazy"/><span class="dp-iname">${p.latin}</span><span class="dp-iqty">×${qty[p.id]}</span><span class="dp-iprice">$${(qty[p.id]*precio).toFixed(2)}</span></div>`).join(""):`<p class="dp-empty">Todavía no has seleccionado plantas</p>`;
+    document.getElementById("dpN").textContent=n;
+    document.getElementById("dpU").textContent=activo?`$${precio.toFixed(2)}`:"—";
+    document.getElementById("dpS").textContent=`$${sub.toFixed(2)}`;
+    document.getElementById("dpT").textContent=`$${(activo?totalFin:ENVIO).toFixed(2)}`;
+    dpBtn.disabled=!activo;
+    if(activo){const m=buildMsg(n,precio,sub,totalFin);dpBtn.onclick=()=>window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,"_blank")}
+    else dpBtn.onclick=null;
+  }
+
+  document.getElementById("dReset").addEventListener("click",()=>{plantas.forEach(p=>{qty[p.id]=0;upCard(p.id)});drawer.classList.remove("open");upAll()});
+  document.getElementById("dpReset")?.addEventListener("click",()=>{plantas.forEach(p=>{qty[p.id]=0;upCard(p.id)});upAll()});
+
+  upAll();
+</script>
+</body>
+</html>
