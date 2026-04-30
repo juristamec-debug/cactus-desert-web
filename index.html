@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cactus Desert | Cactus y suculentas en Ecuador — Envíos a todo el país</title>
-    <meta name="description" content="Cactus Desert: paquetes de cactus y suculentas desde $27, macetas artesanales y regalos únicos en Ecuador. Compra en línea con envío a todo el país. Más de 1.500 entregas." />
+    <meta name="description" content="Cactus Desert: paquetes de cactus y suculentas desde $27. Compra en línea con envío a todo el país." />
     <link rel="canonical" href="https://www.cactusdesert.com/" />
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <link rel="icon" type="image/png" href="https://i.postimg.cc/fymrSRpK/oie-transparent-(1).png" />
     <meta name="theme-color" content="#df7b3e" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,6 +28,9 @@
       #toast{opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity 200ms ease,transform 200ms ease}
       #toast.show{opacity:1;transform:translateY(0)}
       .envio-badge{display:inline-flex;align-items:center;gap:0.3rem;background:#fff3e0;color:#bf5300;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;padding:0.2rem 0.6rem;border-radius:999px;border:1px solid #f0a060;white-space:nowrap}
+      .success-checkmark{width:80px;height:80px;margin:0 auto;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#4BB543;animation:scaleUp 0.4s ease}
+      .success-checkmark svg{width:50px;height:50px;color:white}
+      @keyframes scaleUp{0%{transform:scale(0)}80%{transform:scale(1.2)}100%{transform:scale(1)}}
     </style>
   </head>
 
@@ -40,7 +42,7 @@
         <a href="#hero" class="flex h-full items-center">
           <img src="https://i.postimg.cc/fymrSRpK/oie-transparent-(1).png" alt="Cactus Desert" width="260" height="82" class="h-[76px] w-auto object-contain lg:h-[82px]" decoding="async" loading="eager" />
         </a>
-        <nav class="hidden items-center gap-6 text-base font-medium text-brand-dark/75 lg:flex" aria-label="Navegación principal">
+        <nav class="hidden items-center gap-6 text-base font-medium text-brand-dark/75 lg:flex">
           <a class="hover:text-brand-dark" href="#paquetes">Paquetes</a>
           <a class="hover:text-brand-dark" href="#como-comprar">Cómo comprar</a>
           <a class="hover:text-brand-dark" href="#opiniones">Opiniones</a>
@@ -48,10 +50,10 @@
           <a class="rounded-full bg-brand-primary px-4 py-1.5 text-sm font-semibold text-white hover:bg-brand-primary/90 transition" href="arma-tu-paquete.html">🌿 Arma tu paquete</a>
         </nav>
         <div class="flex items-center gap-3">
-          <button id="openMenu" type="button" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-sand/70 bg-white text-brand-dark hover:border-brand-primary" aria-label="Abrir menú">
+          <button id="openMenu" type="button" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-sand/70 bg-white text-brand-dark hover:border-brand-primary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
-          <a href="https://wa.me/593968691551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20paquetes%20de%20suculentas" target="_blank" rel="noreferrer" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2 text-sm font-semibold text-white shadow-soft hover:bg-[#1ebe5d] transition">
+          <a href="https://wa.me/593968691551?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noreferrer" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2 text-sm font-semibold text-white shadow-soft hover:bg-[#1ebe5d] transition">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.528 5.855L.057 23.09a.75.75 0 00.906.921l5.347-1.477A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.25-1.376l-.374-.217-3.882 1.072 1.036-3.777-.233-.388A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
             WhatsApp
           </a>
@@ -76,7 +78,7 @@
         <a class="rounded-2xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 hover:border-brand-primary" href="#opiniones">Opiniones</a>
         <a class="rounded-2xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 hover:border-brand-primary" href="#faq">Preguntas</a>
         <a class="rounded-2xl border border-brand-primary bg-brand-primary/10 px-4 py-3 text-brand-primary font-bold" href="arma-tu-paquete.html">🌿 Arma tu paquete</a>
-        <a href="https://wa.me/593968691551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20paquetes%20de%20suculentas" target="_blank" rel="noreferrer" class="mt-3 inline-flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1ebe5d] transition">WhatsApp</a>
+        <a href="https://wa.me/593968691551?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noreferrer" class="mt-3 inline-flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white hover:bg-[#1ebe5d] transition">WhatsApp</a>
       </nav>
     </aside>
 
@@ -84,25 +86,18 @@
       <!-- HERO -->
       <section id="hero" class="relative min-h-screen">
         <div class="absolute inset-0 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1494516192674-b82b5f1e61dc?auto=format&fit=crop&w=2000&q=80" alt="Cactus y suculentas en Cactus Desert Ecuador" width="2000" height="1333" class="h-full w-full object-cover object-center" loading="eager" decoding="async" />
+          <img src="https://images.unsplash.com/photo-1494516192674-b82b5f1e61dc?auto=format&fit=crop&w=2000&q=80" alt="Cactus y suculentas" width="2000" height="1333" class="h-full w-full object-cover object-center" loading="eager" />
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/80 via-brand-primary/75 to-brand-primary/40"></div>
         <div class="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center gap-6 px-6 pt-24 text-white">
           <div class="flex flex-wrap gap-3">
             <span class="rounded-full bg-white/20 px-4 py-1 text-xs uppercase tracking-[0.25em]">Paquetes exclusivos</span>
-            <span class="rounded-full bg-white/20 px-4 py-1 text-xs uppercase tracking-[0.25em]">Regalos verdes</span>
           </div>
           <h1 class="font-display text-4xl drop-shadow-sm sm:text-5xl lg:text-6xl">Cactus &amp; Suculentas en Ecuador</h1>
-          <p class="hero-description max-w-xl text-lg text-white/95">Seleccionamos cactus y suculentas sanas, listos para decorar tu hogar o sorprender con un regalo vivo. Paquetes desde <strong>$27</strong>. Envío <strong>$7</strong> a todo Ecuador.</p>
+          <p class="max-w-xl text-lg text-white/95">Paquetes desde <strong>$27</strong>. Envío <strong>$7</strong> a todo Ecuador.</p>
           <div class="flex flex-wrap gap-4">
             <a href="#paquetes" class="rounded-full bg-brand-dark px-6 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-dark/90 transition">Ver paquetes</a>
             <a href="arma-tu-paquete.html" class="rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary/90 transition">🌿 Arma tu paquete</a>
-            <a href="https://wa.me/593968691551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20paquetes%20de%20suculentas" target="_blank" rel="noreferrer" class="rounded-full border border-white/60 px-6 py-3 text-sm font-semibold hover:bg-white/10 transition">WhatsApp</a>
-          </div>
-          <div class="mt-10 grid gap-4 sm:grid-cols-3">
-            <div class="rounded-2xl bg-white/15 p-4 text-sm"><p class="font-semibold">+1.500 entregas</p><p class="text-white/95">Clientes felices en Ecuador.</p></div>
-            <div class="rounded-2xl bg-white/15 p-4 text-sm"><p class="font-semibold">Envío $7 a todo Ecuador</p><p class="text-white/95">Embalaje especial para cada planta.</p></div>
-            <div class="rounded-2xl bg-white/15 p-4 text-sm"><p class="font-semibold">Cuidado experto</p><p class="text-white/95">Guías simples para mantenerlas vivas.</p></div>
           </div>
         </div>
       </section>
@@ -114,7 +109,6 @@
             <p class="text-sm uppercase tracking-[0.35em] text-brand-primary">Cómo comprar</p>
             <h2 class="font-display text-3xl text-brand-dark sm:text-4xl">Compra fácil en la web</h2>
           </div>
-          <p class="max-w-xl text-brand-dark/80">Compra aquí o escríbenos por WhatsApp. Envío <strong>$7</strong> a cualquier provincia del Ecuador.</p>
         </div>
         <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div class="rounded-3xl border border-brand-sand/60 bg-white p-6 shadow-soft"><p class="text-sm text-brand-dark/55">Paso 1</p><h3 class="mt-2 font-display text-xl text-brand-dark">Elige tu producto</h3><p class="mt-3 text-sm text-brand-dark/80">Selecciona el paquete ideal para tu espacio o para regalar.</p></div>
@@ -124,67 +118,7 @@
         </div>
       </section>
 
-      <!-- ARMA TU PAQUETE -->
-      <section class="bg-white scroll-mt-28">
-        <div class="mx-auto max-w-6xl px-6 py-20">
-          <div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
-
-            <!-- Texto + tabla precios -->
-            <div class="max-w-xl">
-              <p class="text-sm uppercase tracking-[0.35em] text-brand-primary">Paquete personalizado</p>
-              <h2 class="font-display text-3xl text-brand-dark sm:text-4xl">¿Quieres escoger tus propias plantas?</h2>
-              <p class="mt-4 text-brand-dark/80">Con nuestro armador puedes elegir exactamente qué suculentas quieres ver sus fotos y leer sus cuidados. <strong>Entre más plantas escoges, menos pagas por cada una.</strong></p>
-
-              <!-- Tabla precios -->
-              <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                <div class="rounded-2xl bg-brand-sand/30 px-3 py-4 border border-brand-sand/50 text-center">
-                  <p class="font-display text-2xl text-brand-dark">6</p>
-                  <p class="text-xs text-brand-dark/60 mb-1">plantas</p>
-                  <p class="font-bold text-brand-primary text-sm">$4.50 c/u</p>
-                  <p class="text-xs text-brand-dark/50">$27 total</p>
-                </div>
-                <div class="rounded-2xl bg-brand-sand/30 px-3 py-4 border border-brand-sand/50 text-center">
-                  <p class="font-display text-2xl text-brand-dark">12</p>
-                  <p class="text-xs text-brand-dark/60 mb-1">plantas</p>
-                  <p class="font-bold text-brand-primary text-sm">$3.50 c/u</p>
-                  <p class="text-xs text-brand-dark/50">$42 total</p>
-                </div>
-                <div class="rounded-2xl bg-brand-sand/30 px-3 py-4 border border-brand-sand/50 text-center">
-                  <p class="font-display text-2xl text-brand-dark">16</p>
-                  <p class="text-xs text-brand-dark/60 mb-1">plantas</p>
-                  <p class="font-bold text-brand-primary text-sm">$3.00 c/u</p>
-                  <p class="text-xs text-brand-dark/50">$48 total</p>
-                </div>
-                <div class="rounded-2xl bg-brand-primary px-3 py-4 border border-brand-primary text-center relative">
-                  <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-[9px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">Mejor precio</span>
-                  <p class="font-display text-2xl text-white">20+</p>
-                  <p class="text-xs text-white/70 mb-1">plantas</p>
-                  <p class="font-bold text-white text-sm">$2.50 c/u</p>
-                  <p class="text-xs text-white/60">desde $50</p>
-                </div>
-              </div>
-              <p class="mt-3 text-xs text-brand-dark/50">Mínimo 6 plantas · Envío $7 a todo Ecuador</p>
-            </div>
-
-            <!-- Card CTA -->
-            <div class="flex flex-col items-center lg:min-w-[300px]">
-              <div class="w-full rounded-3xl border border-brand-sand/50 bg-brand-sand/15 p-8 text-center shadow-soft">
-                <p class="text-5xl mb-4">🌵</p>
-                <p class="font-display text-2xl text-brand-dark mb-2">20 variedades</p>
-                <p class="text-sm text-brand-dark/70 mb-2">Ve las fotos, lee los cuidados de cada suculenta y elige exactamente las que quieres.</p>
-                <p class="text-xs text-brand-dark/50 mb-6">El precio baja automáticamente según cuántas agregues.</p>
-                <a href="arma-tu-paquete.html" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-primary px-6 py-3.5 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary/90 transition">
-                  🌿 Armar mi paquete
-                </a>
-                <p class="mt-3 text-xs text-brand-dark/40">Desde 6 plantas · Envío $7</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- PAQUETES (SOLO PAQUETES, SIN MACETAS) -->
+      <!-- PAQUETES -->
       <section id="paquetes" class="mx-auto max-w-6xl px-6 py-20 scroll-mt-28">
         <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -203,10 +137,9 @@
             <p class="text-sm uppercase tracking-[0.35em] text-brand-primary">Opiniones</p>
             <h2 class="font-display text-3xl text-brand-dark sm:text-4xl">Historias que florecen</h2>
           </div>
-          <p class="max-w-xl text-brand-dark/80">Clientes que transformaron sus espacios con Cactus Desert.</p>
         </div>
         <div class="mt-12 grid gap-6 md:grid-cols-3">
-          <div class="rounded-3xl border border-brand-sand/60 bg-white p-6 shadow-soft"><p class="text-sm text-brand-dark/80">"Llegaron perfectas, con guía y tarjeta lista para regalar."</p><p class="mt-4 font-semibold text-brand-dark">— Daniela G.</p></div>
+          <div class="rounded-3xl border border-brand-sand/60 bg-white p-6 shadow-soft"><p class="text-sm text-brand-dark/80">"Llegaron perfectas, con guía lista para regalar."</p><p class="mt-4 font-semibold text-brand-dark">— Daniela G.</p></div>
           <div class="rounded-3xl border border-brand-sand/60 bg-white p-6 shadow-soft"><p class="text-sm text-brand-dark/80">"El empaque es impresionante, ninguna planta llegó dañada."</p><p class="mt-4 font-semibold text-brand-dark">— Andrés P.</p></div>
           <div class="rounded-3xl border border-brand-sand/60 bg-white p-6 shadow-soft"><p class="text-sm text-brand-dark/80">"Pedí para mi oficina y todos quedaron fascinados."</p><p class="mt-4 font-semibold text-brand-dark">— Sofía C.</p></div>
         </div>
@@ -215,19 +148,11 @@
       <!-- FAQ -->
       <section id="faq" class="bg-white scroll-mt-28">
         <div class="mx-auto max-w-6xl px-6 py-20">
-          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p class="text-sm uppercase tracking-[0.35em] text-brand-primary">Preguntas frecuentes</p>
-              <h2 class="font-display text-3xl text-brand-dark sm:text-4xl">Resolvemos tus dudas</h2>
-            </div>
-          </div>
-          <div class="mt-12 space-y-4">
+          <h2 class="font-display text-3xl text-brand-dark sm:text-4xl mb-8">Preguntas frecuentes</h2>
+          <div class="space-y-4">
             <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Cuánto cuesta el envío?</h3><p class="mt-3 text-sm text-brand-dark/80">El envío tiene un costo de <strong>$7</strong> a cualquier provincia del Ecuador.</p></div>
-            <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Hacen envíos a todo Ecuador?</h3><p class="mt-3 text-sm text-brand-dark/80">Sí, enviamos a todas las provincias del Ecuador con embalaje especial protector.</p></div>
-            <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Cómo cuido mis cactus y suculentas?</h3><p class="mt-3 text-sm text-brand-dark/80">Con cada paquete enviamos una guía básica de luz, riego y sustrato.</p></div>
-            <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Qué métodos de pago aceptan?</h3><p class="mt-3 text-sm text-brand-dark/80">Transferencia bancaria y depósito. El comprobante se sube directamente en la página.</p></div>
-            <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Puedo escoger mis propias plantas?</h3><p class="mt-3 text-sm text-brand-dark/80">Sí. Usa nuestro <a href="arma-tu-paquete.html" class="text-brand-primary font-semibold underline">armador de paquetes</a> para elegir exactamente qué suculentas quieres. El precio baja según cuántas agregues — desde 6 plantas a $4.50 c/u.</p></div>
-            <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Cuánto cuestan los paquetes en Ecuador?</h3><p class="mt-3 text-sm text-brand-dark/80">Desde <strong>$27 por 6 plantas</strong> hasta <strong>$70 por 20 plantas</strong>. Envío <strong>$7</strong> a todo el país.</p></div>
+            <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Hacen envíos a todo Ecuador?</h3><p class="mt-3 text-sm text-brand-dark/80">Sí, enviamos a todas las provincias.</p></div>
+            <div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/25 p-6"><h3 class="font-display text-xl text-brand-dark">¿Qué métodos de pago aceptan?</h3><p class="mt-3 text-sm text-brand-dark/80">Transferencia bancaria. El comprobante se sube en la página.</p></div>
           </div>
         </div>
       </section>
@@ -237,353 +162,333 @@
       <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p class="font-display text-xl text-brand-dark">Cactus Desert</p>
-          <p class="mt-1 text-sm text-brand-dark/80">@cactus.suculentas.ec · cactusdesert.com</p>
-          <p class="mt-1 text-xs text-brand-dark/60">cactusdesert.ec@gmail.com · Ecuador</p>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <span class="rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">Envío $7 · Todo Ecuador</span>
-          <span class="rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">+1.500 entregas</span>
+          <p class="mt-1 text-sm text-brand-dark/80">cactusdesert.ec@gmail.com · Ecuador</p>
         </div>
       </div>
     </footer>
 
-    <!-- FAB WhatsApp -->
-    <a href="https://wa.me/593968691551?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20paquetes%20de%20suculentas" target="_blank" rel="noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-[#1ebe5d] transition">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.528 5.855L.057 23.09a.75.75 0 00.906.921l5.347-1.477A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.25-1.376l-.374-.217-3.882 1.072 1.036-3.777-.233-.388A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      <span>WhatsApp</span>
-    </a>
-
     <!-- TOAST -->
     <div class="fixed bottom-6 left-6 z-[95]">
-      <div id="toast" class="rounded-2xl bg-brand-dark px-4 py-3 text-sm font-semibold text-white shadow-soft" role="status" aria-live="polite">✅ Listo</div>
+      <div id="toast" class="rounded-2xl bg-brand-dark px-4 py-3 text-sm font-semibold text-white shadow-soft">✅ Listo</div>
     </div>
 
     <!-- CARRITO -->
     <div id="cartOverlay" class="fixed inset-0 z-[80] hidden bg-black/60"></div>
     <aside id="cartDrawer" class="fixed right-0 top-0 z-[90] flex h-full w-full max-w-md translate-x-full flex-col bg-white shadow-soft transition-transform">
       <div class="flex items-center justify-between border-b border-brand-sand/60 p-5">
-        <div><p class="text-sm uppercase tracking-[0.3em] text-brand-primary">Carrito</p><p class="text-xs text-brand-dark/60">Pago: transferencia bancaria · Envío: $7</p></div>
+        <div><p class="text-sm uppercase tracking-[0.3em] text-brand-primary">Carrito</p><p class="text-xs text-brand-dark/60">Envío: $7</p></div>
         <button id="closeCart" class="rounded-full border border-brand-sand/70 px-4 py-2 text-sm text-brand-dark hover:border-brand-primary">Cerrar</button>
       </div>
       <div id="cartItems" class="flex-1 overflow-y-auto p-5"></div>
       <div class="border-t border-brand-sand/60 p-5">
-        <div class="flex items-center justify-between text-sm text-brand-dark/60 mb-1"><span>Subtotal productos:</span><span id="cartSubtotal">$0.00</span></div>
-        <div class="flex items-center justify-between text-sm text-brand-dark/60 mb-2"><span>Envío:</span><span class="font-semibold text-brand-primary">$7.00</span></div>
+        <div class="flex items-center justify-between text-sm text-brand-dark/60 mb-1"><span>Subtotal:</span><span id="cartSubtotal">$0.00</span></div>
+        <div class="flex items-center justify-between text-sm text-brand-dark/60 mb-2"><span>Envío:</span><span>$7.00</span></div>
         <div class="flex items-center justify-between text-base font-semibold text-brand-dark border-t border-brand-sand/40 pt-2"><span>Total:</span><span id="cartTotal">$0.00</span></div>
-        <button id="checkoutBtn" class="mt-4 w-full rounded-2xl bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary/90 disabled:cursor-not-allowed disabled:opacity-50 transition" disabled>Finalizar Compra</button>
-        <p class="mt-2 text-xs text-brand-dark/60">Al finalizar te pedimos tus datos y los datos de transferencia.</p>
+        <button id="checkoutBtn" class="mt-4 w-full rounded-2xl bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary/90 disabled:opacity-50 transition" disabled>Finalizar Compra</button>
       </div>
     </aside>
 
     <!-- MODAL DATOS ENVÍO -->
-    <div id="checkoutModal" class="fixed inset-0 z-[92] hidden items-center justify-center bg-black/60 px-4 py-10" role="dialog" aria-modal="true">
+    <div id="checkoutModal" class="fixed inset-0 z-[92] hidden items-center justify-center bg-black/60 px-4 py-10">
       <div class="w-full max-w-xl rounded-3xl bg-white p-6 shadow-soft">
         <h3 class="text-center font-display text-3xl text-brand-primary">Datos de Envío</h3>
         <form id="checkoutForm" class="mt-6 space-y-3">
-          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="text" name="fullName" placeholder="Nombre Completo" required autocomplete="name" />
-          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="email" name="email" placeholder="Correo Electrónico" required autocomplete="email" />
-          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="tel" name="phone" placeholder="Teléfono" required autocomplete="tel" />
+          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="text" name="fullName" placeholder="Nombre Completo" required />
+          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="email" name="email" placeholder="Correo Electrónico" required />
+          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="tel" name="phone" placeholder="Teléfono" required />
           <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="text" name="idNumber" placeholder="Cédula" required />
-          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="text" name="address" placeholder="Ciudad y Dirección de Envío" required autocomplete="street-address" />
+          <input class="w-full rounded-xl border border-brand-sand/60 bg-brand-sand/10 px-4 py-3 text-sm outline-none focus:border-brand-primary" type="text" name="address" placeholder="Dirección de Envío" required />
           <div class="mt-5 flex flex-col gap-3 sm:flex-row">
             <button id="checkoutCancel" type="button" class="w-full rounded-xl bg-brand-dark/5 px-5 py-3 text-sm font-semibold text-brand-dark hover:bg-brand-dark/10">Cancelar</button>
-            <button type="submit" class="w-full rounded-xl bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary/90 transition">Realizar Pedido</button>
+            <button type="submit" class="w-full rounded-xl bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary/90">Continuar</button>
           </div>
-          <p class="mt-2 text-center text-xs text-brand-dark/60">Método de pago: <b>Transferencia bancaria</b>. Envío: <b>$7</b>.</p>
         </form>
       </div>
     </div>
 
     <!-- MODAL PAGO -->
-    <div id="paymentModal" class="fixed inset-0 z-[93] hidden items-center justify-center bg-black/60 px-4 py-6" role="dialog" aria-modal="true">
-      <div class="w-full max-w-2xl rounded-3xl bg-white p-4 md:p-5 shadow-soft" style="max-height:92vh;overflow:hidden">
-        <div class="flex flex-col items-center text-center">
-          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-sand/40 text-xl">✅</div>
-          <h3 class="mt-3 font-display text-2xl sm:text-3xl text-brand-primary">¡Pedido Recibido!</h3>
-          <p class="mt-2 text-sm text-brand-dark/80">Completa tu compra con los siguientes pasos.</p>
-          <p class="mt-1 text-xs text-brand-dark/60"><span id="orderIdText"></span></p>
+    <div id="paymentModal" class="fixed inset-0 z-[93] hidden items-center justify-center bg-black/60 px-4 py-6">
+      <div class="w-full max-w-2xl rounded-3xl bg-white p-6 shadow-soft">
+        <div class="text-center">
+          <h3 class="font-display text-2xl text-brand-primary">✨ Completa tu pago ✨</h3>
+          <p class="mt-2 text-brand-dark/80"><span id="orderIdText"></span></p>
         </div>
-        <div class="mt-5 grid gap-4 md:grid-cols-2">
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
           <div class="rounded-2xl border border-brand-sand/60 bg-brand-sand/15 p-4">
-            <p class="font-semibold text-brand-primary">Paso 1: Realiza el Pago</p>
-            <div class="mt-2 text-sm text-brand-dark/80">
-              <p><b>Banco:</b> <span id="bankName"></span></p>
-              <p><b>Cuenta:</b> <span id="bankAccount"></span></p>
-              <p><b>Nombre:</b> <span id="bankHolder"></span></p>
-              <p><b>Cédula/RUC:</b> <span id="bankId"></span></p>
-              <p class="mt-2"><b>Subtotal:</b> <span id="paySubtotal"></span></p>
-              <p><b>Envío:</b> $7.00</p>
-              <p class="mt-1 font-bold text-brand-dark"><b>Total a pagar:</b> <span id="payTotal"></span></p>
+            <p class="font-semibold text-brand-primary">💳 Datos para transferencia</p>
+            <div class="mt-2 text-sm">
+              <p><b>Banco:</b> Banco Pichincha</p>
+              <p><b>Cuenta:</b> 2208128370</p>
+              <p><b>Nombre:</b> Noemi Jimenez Caceres</p>
+              <p><b>Cédula:</b> 0929476489</p>
+              <p class="mt-2"><b>Total a pagar:</b> <span id="payTotal" class="font-bold text-brand-primary"></span></p>
             </div>
           </div>
           <div class="rounded-2xl border border-brand-sand/60 bg-white p-4">
-            <p class="font-semibold text-brand-primary">Paso 2: Sube tu Comprobante</p>
-            <iframe name="fs_iframe" style="display:none"></iframe>
-            <form id="receiptForm" method="POST" enctype="multipart/form-data" target="fs_iframe" class="mt-3">
+            <p class="font-semibold text-brand-primary">📎 Sube tu comprobante</p>
+            <form id="finalForm" method="POST" enctype="multipart/form-data">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_subject" id="fsSubject" value="Nuevo comprobante de pago" />
-              <input type="hidden" name="_replyto" id="fsReplyTo" value="" />
-              <input type="hidden" name="pedido_id" id="fsPedidoId" value="" />
-              <input type="hidden" name="total" id="fsTotal" value="" />
-              <input type="hidden" name="cliente" id="fsCliente" value="" />
-              <input type="hidden" name="telefono" id="fsTelefono" value="" />
-              <input type="hidden" name="cedula" id="fsCedula" value="" />
-              <input type="hidden" name="direccion" id="fsDireccion" value="" />
-              <input type="hidden" name="items" id="fsItems" value="" />
-              <input type="hidden" name="datos_transferencia" id="fsBank" value="" />
-              <input id="receiptFile" name="attachment" type="file" accept="image/png,image/jpeg,image/jpg,image/webp" class="hidden" required />
-              <label for="receiptFile" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary/90 transition">🧾 Seleccionar comprobante</label>
-              <p id="receiptName" class="mt-2 text-xs text-brand-dark/60">Ningún archivo seleccionado</p>
-              <button id="sendReceiptBtn" type="submit" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-sand px-5 py-2.5 text-sm font-semibold text-brand-dark shadow-soft hover:opacity-95 transition">📩 Enviar Comprobante</button>
+              <input type="hidden" id="fsSubject" name="_subject" value="" />
+              <input type="hidden" id="fsPedidoId" name="pedido_id" value="" />
+              <input type="hidden" id="fsCliente" name="cliente" value="" />
+              <input type="hidden" id="fsEmail" name="email" value="" />
+              <input type="hidden" id="fsTelefono" name="telefono" value="" />
+              <input type="hidden" id="fsCedula" name="cedula" value="" />
+              <input type="hidden" id="fsDireccion" name="direccion" value="" />
+              <input type="hidden" id="fsProductos" name="productos" value="" />
+              <input type="hidden" id="fsSubtotal" name="subtotal" value="" />
+              <input type="hidden" id="fsTotal" name="total" value="" />
+              <input type="file" id="receiptFile" name="comprobante" accept="image/*" class="hidden" required />
+              <label for="receiptFile" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white">🧾 Seleccionar comprobante</label>
+              <p id="receiptName" class="mt-2 text-xs text-brand-dark/60 text-center">Ningún archivo</p>
+              <button type="submit" id="sendReceiptBtn" class="mt-3 w-full rounded-xl bg-brand-sand px-5 py-2.5 text-sm font-semibold text-brand-dark hover:opacity-95 transition">📩 Enviar Comprobante y Finalizar</button>
             </form>
           </div>
         </div>
-        <div class="mt-4 flex justify-center">
-          <button id="paymentClose" type="button" class="w-full rounded-xl bg-brand-dark/5 px-5 py-3 text-sm font-semibold text-brand-dark hover:bg-brand-dark/10 sm:w-56">Cerrar</button>
-        </div>
+        <button id="paymentClose" class="mt-5 w-full rounded-xl bg-brand-dark/5 px-5 py-3 text-sm font-semibold text-brand-dark hover:bg-brand-dark/10">Cancelar</button>
       </div>
     </div>
+
+    <!-- MODAL ÉXITO -->
+    <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 px-4">
+      <div class="w-full max-w-md rounded-3xl bg-white p-8 text-center shadow-soft">
+        <div class="success-checkmark mx-auto">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <h3 class="mt-4 font-display text-2xl text-brand-primary">✅ ¡Pedido Recibido!</h3>
+        <p class="mt-2 text-brand-dark/80">Hemos recibido tus datos y tu comprobante de pago.</p>
+        <p class="text-sm text-brand-dark/60 mt-1">En un instante nos pondremos en contacto contigo para confirmar tu pedido y coordinar el envío.</p>
+        <button id="closeSuccessModal" class="mt-6 rounded-full bg-brand-primary px-8 py-3 text-white font-semibold hover:bg-brand-primary/90 transition">¡Excelente!</button>
+      </div>
+    </div>
+
+    <!-- IFRAME OCULTO para capturar el envío de FormSubmit sin redirigir -->
+    <iframe name="hidden_iframe" style="display:none" onload="handleFormSubmitResponse()"></iframe>
 
     <script>
       const WA = "593968691551";
       const ENVIO = 7;
       const waLink = (msg) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
       const waSVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.528 5.855L.057 23.09a.75.75 0 00.906.921l5.347-1.477A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.25-1.376l-.374-.217-3.882 1.072 1.036-3.777-.233-.388A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>`;
-
+      
       const catalog = {
-        p1:  { tag:"Box de 6",  title:"Paquete x6 — Mix Escritorio",   desc:"Mix variado de 6 suculentas mini. Perfectas para escritorios y detalles personales. Incluye guía de cuidados.",                               price:27, pageUrl:"paquete-p1.html",  waMsg:"Hola, quiero el Paquete x6 Mix Escritorio ($27 + $7 envío). ¿Tienen disponible?",   img:"https://i.postimg.cc/J7XPKSgn/1.png" },
-        p2:  { tag:"Box de 6",  title:"Paquete x6 — Mix Formas",       desc:"Seis suculentas con formas contrastantes: redondas, alargadas y en roseta. Gran variedad visual en un solo box.",                               price:27, pageUrl:"paquete-p2.html",  waMsg:"Hola, quiero el Paquete x6 Mix Formas ($27 + $7 envío). ¿Tienen disponible?",       img:"https://i.postimg.cc/DfpbDgW1/20.png" },
-        p3:  { tag:"Box de 6",  title:"Paquete x6 — Mix Colores",       desc:"Seis suculentas seleccionadas por su colorido vibrante. Alegran cualquier rincón del hogar u oficina.",                                         price:27, pageUrl:"paquete-p3.html",  waMsg:"Hola, quiero el Paquete x6 Mix Colores ($27 + $7 envío). ¿Tienen disponible?",      img:"https://i.postimg.cc/Hk3Fg4nL/28.png" },
-        p4:  { tag:"Box de 6",  title:"Paquete x6 — Mix Regalo",        desc:"Seis suculentas presentadas listas para regalar, con tarjeta incluida. El detalle perfecto para cualquier ocasión.",                            price:27, pageUrl:"paquete-p4.html",  waMsg:"Hola, quiero el Paquete x6 Mix Regalo ($27 + $7 envío). ¿Tienen disponible?",       img:"https://i.postimg.cc/bJFzwfvY/43.png" },
-        p5:  { tag:"Box de 6",  title:"Paquete x6 — Mix Pastel",        desc:"Seis suculentas en tonos suaves y pastel. Diseño pensado para espacios minimalistas y decoración delicada.",                                   price:27, pageUrl:"paquete-p5.html",  waMsg:"Hola, quiero el Paquete x6 Mix Pastel ($27 + $7 envío). ¿Tienen disponible?",       img:"https://i.postimg.cc/m23g7qX8/47.png" },
-        p6:  { tag:"Box de 12", title:"Paquete x12 — Mix Cactus",       desc:"Doce cactus de distintas variedades para decoración continua. Mínimo riego, máximo impacto visual.",                                           price:42, pageUrl:"paquete-p6.html",  waMsg:"Hola, quiero el Paquete x12 Mix Cactus ($42 + $7 envío). ¿Tienen disponible?",      img:"https://i.postimg.cc/g2vkq7gD/41.png" },
-        p7:  { tag:"Box de 6",  title:"Paquete x6 — Mix Inicio",        desc:"Opción práctica para comenzar tu colección. Seis suculentas fáciles de cuidar, ideales para principiantes.",                                  price:27, pageUrl:"paquete-p7.html",  waMsg:"Hola, quiero el Paquete x6 Mix Inicio ($27 + $7 envío). ¿Tienen disponible?",       img:"https://i.postimg.cc/0yQ1rHLj/49.png" },
-        p8:  { tag:"Box de 9",  title:"Paquete x9 — Mix Decoración",    desc:"Nueve suculentas perfectas para decorar distintos ambientes. Pequeñas, vistosas y muy resistentes.",                                           price:36, pageUrl:"paquete-p8.html",  waMsg:"Hola, quiero el Paquete x9 Mix Decoración ($36 + $7 envío). ¿Tienen disponible?",   img:"https://i.postimg.cc/YSWVWc8j/51.png" },
-        p9:  { tag:"Box de 12", title:"Paquete x12 — Mix Equipo",       desc:"Doce suculentas con mix de colores y formas. Ideales para regalos de equipo o mesa de reuniones.",                                             price:42, pageUrl:"paquete-p9.html",  waMsg:"Hola, quiero el Paquete x12 Mix Equipo ($42 + $7 envío). ¿Tienen disponible?",      img:"https://i.postimg.cc/dDcsWK7k/3.png" },
-        p10: { tag:"Box de 12", title:"Paquete x12 — Mix Especial",     desc:"Selección de 12 suculentas para regalos especiales y pequeños espacios del hogar. Detalle con impacto.",                                      price:42, pageUrl:"paquete-p10.html", waMsg:"Hola, quiero el Paquete x12 Mix Especial ($42 + $7 envío). ¿Tienen disponible?",    img:"https://i.postimg.cc/9QtwFzHw/63.png" },
-        p11: { tag:"Box de 6",  title:"Paquete x6 — Mix Evento",        desc:"Seis suculentas de tamaño mixto perfectas para regalar en eventos especiales con tarjeta incluida.",                                           price:27, pageUrl:"paquete-p11.html", waMsg:"Hola, quiero el Paquete x6 Mix Evento ($27 + $7 envío). ¿Tienen disponible?",       img:"https://i.postimg.cc/mgJsVs0R/9.png" },
-        p12: { tag:"Box de 12", title:"Paquete x12 — Mix Mesa",         desc:"Doce suculentas para mesas medianas y regalos corporativos. Variedad pensada para grupos y equipos.",                                          price:42, pageUrl:"paquete-p12.html", waMsg:"Hola, quiero el Paquete x12 Mix Mesa ($42 + $7 envío). ¿Tienen disponible?",        img:"https://i.postimg.cc/wvhgkWYJ/13.png" },
-        p13: { tag:"Box de 12", title:"Paquete x12 — Mix Premium",      desc:"Doce suculentas de selección premium. Variedad de texturas y colores para una presentación impactante.",                                      price:42, pageUrl:"paquete-p13.html", waMsg:"Hola, quiero el Paquete x12 Mix Premium ($42 + $7 envío). ¿Tienen disponible?",     img:"https://i.postimg.cc/9M8z6mfT/18.png" },
-        p14: { tag:"Box de 12", title:"Paquete x12 — Mix Moderno",      desc:"Doce suculentas que dan toque moderno y natural a cualquier rincón. Combinación equilibrada de formas.",                                      price:42, pageUrl:"paquete-p14.html", waMsg:"Hola, quiero el Paquete x12 Mix Moderno ($42 + $7 envío). ¿Tienen disponible?",     img:"https://i.postimg.cc/HsY2gGyR/38.png" },
-        p15: { tag:"Box de 6",  title:"Paquete x6 — Mix Obsequio",      desc:"Seis suculentas listas como obsequio decorativo. Ideales para recuerdos de bodas, grados y eventos.",                                        price:27, pageUrl:"paquete-p15.html", waMsg:"Hola, quiero el Paquete x6 Mix Obsequio ($27 + $7 envío). ¿Tienen disponible?",     img:"https://i.postimg.cc/PJ38HRgD/40.png" },
-        p16: { tag:"Box de 12", title:"Paquete x12 — Mix Cactus II",    desc:"Doce cactus de distintas variedades para decoración. Mínimo riego, máximo impacto visual en cualquier espacio.",                             price:42, pageUrl:"paquete-p16.html", waMsg:"Hola, quiero el Paquete x12 Mix Cactus II ($42 + $7 envío). ¿Tienen disponible?",   img:"https://i.postimg.cc/nzmdCvFk/32.png" },
-        p17: { tag:"Box de 6",  title:"Paquete x6 — Mix Ambiente",      desc:"Seis suculentas versátiles para hogar, oficina o negocio. Combinación para distintos tipos de iluminación.",                                 price:27, pageUrl:"paquete-p17.html", waMsg:"Hola, quiero el Paquete x6 Mix Ambiente ($27 + $7 envío). ¿Tienen disponible?",     img:"https://i.postimg.cc/sDsngQtB/33.png" },
-        p18: { tag:"Box de 12", title:"Paquete x12 — Mix Colección",    desc:"Doce suculentas para combinar en distintos ambientes. Excelente para quienes quieren decorar con estilo.",                                   price:42, pageUrl:"paquete-p18.html", waMsg:"Hola, quiero el Paquete x12 Mix Colección ($42 + $7 envío). ¿Tienen disponible?",   img:"https://i.postimg.cc/6pwNwp0t/colecciones-CD.png" },
-        p19: { tag:"Box de 12", title:"Paquete x12 — Mix Espacios",     desc:"Doce plantas para decorar espacios grandes. Mix premium ideal para stands, salas y oficinas abiertas.",                                      price:42, pageUrl:"paquete-p19.html", waMsg:"Hola, quiero el Paquete x12 Mix Espacios ($42 + $7 envío). ¿Tienen disponible?",    img:"https://i.postimg.cc/GthVd7Zx/6.png" },
-        p20: { tag:"Box de 20", title:"Paquete x20 — Mix Corporativo",  desc:"Veinte suculentas para regalos corporativos o decoración empresarial. Presentación elegante y variedad garantizada.",                        price:50, pageUrl:"paquete-p20.html", waMsg:"Hola, quiero el Paquete x20 Mix Corporativo ($50 + $7 envío). ¿Tienen disponible?",  img:"https://i.postimg.cc/05f4m0GJ/54.png" },
-        p21: { tag:"Box de 12", title:"Paquete x12 — Mix Gran Evento",  desc:"Doce suculentas para decoración a gran escala. Ideal para activaciones de marca, bodas y eventos corporativos.",                             price:42, pageUrl:"paquete-p21.html", waMsg:"Hola, quiero el Paquete x12 Mix Gran Evento ($42 + $7 envío). ¿Tienen disponible?",  img:"https://i.postimg.cc/zD0d3X57/56.png" },
-        p22: { tag:"Box de 20", title:"Paquete x20 — Mix Empresarial",  desc:"Veinte suculentas perfectas para empresas y decoraciones masivas. Gran variedad y presentación impecable.",                                  price:50, pageUrl:"paquete-p22.html", waMsg:"Hola, quiero el Paquete x20 Mix Empresarial ($50 + $7 envío). ¿Tienen disponible?",  img:"https://i.postimg.cc/kgrWgkVx/60.png" },
-        p23: { tag:"Box de 6",  title:"Paquete x6 — Mix Coleccionista", desc:"Seis suculentas para coleccionistas. Mix con las variedades más llamativas y difíciles de conseguir.",                                      price:27, pageUrl:"paquete-p23.html", waMsg:"Hola, quiero el Paquete x6 Mix Coleccionista ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/k5Rnm9pg/16.png" },
-        p24: { tag:"Box de 12", title:"Paquete x12 — Mix Oficina",      desc:"Doce suculentas para distribuir en escritorios de una misma oficina. Ambiente vivo y productivo garantizado.",                               price:42, pageUrl:"paquete-p24.html", waMsg:"Hola, quiero el Paquete x12 Mix Oficina ($42 + $7 envío). ¿Tienen disponible?",      img:"https://i.postimg.cc/9QtwFzHw/63.png" },
+        p1: { tag:"Box de 6", title:"Paquete x6 — Mix Escritorio", desc:"Mix variado de 6 suculentas mini. Perfectas para escritorios y detalles personales. Incluye guía de cuidados.", price:27, pageUrl:"paquete-p1.html", waMsg:"Hola, quiero el Paquete x6 Mix Escritorio ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/J7XPKSgn/1.png" },
+        p2: { tag:"Box de 6", title:"Paquete x6 — Mix Formas", desc:"Seis suculentas con formas contrastantes: redondas, alargadas y en roseta. Gran variedad visual en un solo box.", price:27, pageUrl:"paquete-p2.html", waMsg:"Hola, quiero el Paquete x6 Mix Formas ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/DfpbDgW1/20.png" },
+        p3: { tag:"Box de 6", title:"Paquete x6 — Mix Colores", desc:"Seis suculentas seleccionadas por su colorido vibrante. Alegran cualquier rincón del hogar u oficina.", price:27, pageUrl:"paquete-p3.html", waMsg:"Hola, quiero el Paquete x6 Mix Colores ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/Hk3Fg4nL/28.png" },
+        p4: { tag:"Box de 6", title:"Paquete x6 — Mix Regalo", desc:"Seis suculentas presentadas listas para regalar, con tarjeta incluida. El detalle perfecto para cualquier ocasión.", price:27, pageUrl:"paquete-p4.html", waMsg:"Hola, quiero el Paquete x6 Mix Regalo ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/bJFzwfvY/43.png" },
+        p5: { tag:"Box de 6", title:"Paquete x6 — Mix Pastel", desc:"Seis suculentas en tonos suaves y pastel. Diseño pensado para espacios minimalistas y decoración delicada.", price:27, pageUrl:"paquete-p5.html", waMsg:"Hola, quiero el Paquete x6 Mix Pastel ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/m23g7qX8/47.png" },
+        p6: { tag:"Box de 12", title:"Paquete x12 — Mix Cactus", desc:"Doce cactus de distintas variedades para decoración continua. Mínimo riego, máximo impacto visual.", price:42, pageUrl:"paquete-p6.html", waMsg:"Hola, quiero el Paquete x12 Mix Cactus ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/g2vkq7gD/41.png" },
+        p7: { tag:"Box de 6", title:"Paquete x6 — Mix Inicio", desc:"Opción práctica para comenzar tu colección. Seis suculentas fáciles de cuidar, ideales para principiantes.", price:27, pageUrl:"paquete-p7.html", waMsg:"Hola, quiero el Paquete x6 Mix Inicio ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/0yQ1rHLj/49.png" },
+        p8: { tag:"Box de 9", title:"Paquete x9 — Mix Decoración", desc:"Nueve suculentas perfectas para decorar distintos ambientes. Pequeñas, vistosas y muy resistentes.", price:36, pageUrl:"paquete-p8.html", waMsg:"Hola, quiero el Paquete x9 Mix Decoración ($36 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/YSWVWc8j/51.png" },
+        p9: { tag:"Box de 12", title:"Paquete x12 — Mix Equipo", desc:"Doce suculentas con mix de colores y formas. Ideales para regalos de equipo o mesa de reuniones.", price:42, pageUrl:"paquete-p9.html", waMsg:"Hola, quiero el Paquete x12 Mix Equipo ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/dDcsWK7k/3.png" },
+        p10: { tag:"Box de 12", title:"Paquete x12 — Mix Especial", desc:"Selección de 12 suculentas para regalos especiales y pequeños espacios del hogar. Detalle con impacto.", price:42, pageUrl:"paquete-p10.html", waMsg:"Hola, quiero el Paquete x12 Mix Especial ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/9QtwFzHw/63.png" },
+        p11: { tag:"Box de 6", title:"Paquete x6 — Mix Evento", desc:"Seis suculentas de tamaño mixto perfectas para regalar en eventos especiales con tarjeta incluida.", price:27, pageUrl:"paquete-p11.html", waMsg:"Hola, quiero el Paquete x6 Mix Evento ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/mgJsVs0R/9.png" },
+        p12: { tag:"Box de 12", title:"Paquete x12 — Mix Mesa", desc:"Doce suculentas para mesas medianas y regalos corporativos. Variedad pensada para grupos y equipos.", price:42, pageUrl:"paquete-p12.html", waMsg:"Hola, quiero el Paquete x12 Mix Mesa ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/wvhgkWYJ/13.png" },
+        p13: { tag:"Box de 12", title:"Paquete x12 — Mix Premium", desc:"Doce suculentas de selección premium. Variedad de texturas y colores para una presentación impactante.", price:42, pageUrl:"paquete-p13.html", waMsg:"Hola, quiero el Paquete x12 Mix Premium ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/9M8z6mfT/18.png" },
+        p14: { tag:"Box de 12", title:"Paquete x12 — Mix Moderno", desc:"Doce suculentas que dan toque moderno y natural a cualquier rincón. Combinación equilibrada de formas.", price:42, pageUrl:"paquete-p14.html", waMsg:"Hola, quiero el Paquete x12 Mix Moderno ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/HsY2gGyR/38.png" },
+        p15: { tag:"Box de 6", title:"Paquete x6 — Mix Obsequio", desc:"Seis suculentas listas como obsequio decorativo. Ideales para recuerdos de bodas, grados y eventos.", price:27, pageUrl:"paquete-p15.html", waMsg:"Hola, quiero el Paquete x6 Mix Obsequio ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/PJ38HRgD/40.png" },
+        p16: { tag:"Box de 12", title:"Paquete x12 — Mix Cactus II", desc:"Doce cactus de distintas variedades para decoración. Mínimo riego, máximo impacto visual en cualquier espacio.", price:42, pageUrl:"paquete-p16.html", waMsg:"Hola, quiero el Paquete x12 Mix Cactus II ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/nzmdCvFk/32.png" },
+        p17: { tag:"Box de 6", title:"Paquete x6 — Mix Ambiente", desc:"Seis suculentas versátiles para hogar, oficina o negocio. Combinación para distintos tipos de iluminación.", price:27, pageUrl:"paquete-p17.html", waMsg:"Hola, quiero el Paquete x6 Mix Ambiente ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/sDsngQtB/33.png" },
+        p18: { tag:"Box de 12", title:"Paquete x12 — Mix Colección", desc:"Doce suculentas para combinar en distintos ambientes. Excelente para quienes quieren decorar con estilo.", price:42, pageUrl:"paquete-p18.html", waMsg:"Hola, quiero el Paquete x12 Mix Colección ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/6pwNwp0t/colecciones-CD.png" },
+        p19: { tag:"Box de 12", title:"Paquete x12 — Mix Espacios", desc:"Doce plantas para decorar espacios grandes. Mix premium ideal para stands, salas y oficinas abiertas.", price:42, pageUrl:"paquete-p19.html", waMsg:"Hola, quiero el Paquete x12 Mix Espacios ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/GthVd7Zx/6.png" },
+        p20: { tag:"Box de 20", title:"Paquete x20 — Mix Corporativo", desc:"Veinte suculentas para regalos corporativos o decoración empresarial. Presentación elegante y variedad garantizada.", price:50, pageUrl:"paquete-p20.html", waMsg:"Hola, quiero el Paquete x20 Mix Corporativo ($50 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/05f4m0GJ/54.png" },
+        p21: { tag:"Box de 12", title:"Paquete x12 — Mix Gran Evento", desc:"Doce suculentas para decoración a gran escala. Ideal para activaciones de marca, bodas y eventos corporativos.", price:42, pageUrl:"paquete-p21.html", waMsg:"Hola, quiero el Paquete x12 Mix Gran Evento ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/zD0d3X57/56.png" },
+        p22: { tag:"Box de 20", title:"Paquete x20 — Mix Empresarial", desc:"Veinte suculentas perfectas para empresas y decoraciones masivas. Gran variedad y presentación impecable.", price:50, pageUrl:"paquete-p22.html", waMsg:"Hola, quiero el Paquete x20 Mix Empresarial ($50 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/kgrWgkVx/60.png" },
+        p23: { tag:"Box de 6", title:"Paquete x6 — Mix Coleccionista", desc:"Seis suculentas para coleccionistas. Mix con las variedades más llamativas y difíciles de conseguir.", price:27, pageUrl:"paquete-p23.html", waMsg:"Hola, quiero el Paquete x6 Mix Coleccionista ($27 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/k5Rnm9pg/16.png" },
+        p24: { tag:"Box de 12", title:"Paquete x12 — Mix Oficina", desc:"Doce suculentas para distribuir en escritorios de una misma oficina. Ambiente vivo y productivo garantizado.", price:42, pageUrl:"paquete-p24.html", waMsg:"Hola, quiero el Paquete x12 Mix Oficina ($42 + $7 envío). ¿Tienen disponible?", img:"https://i.postimg.cc/9QtwFzHw/63.png" },
       };
 
-      const paqueteIds = ["p1","p2","p3","p4","p5","p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16","p17","p18","p19","p20","p21","p22","p23","p24"];
       const money = (n) => `$${Number(n||0).toFixed(2)}`;
-
+      
       function buildCard(id) {
         const item = catalog[id];
-        return `
-          <article class="rounded-3xl border border-brand-sand/60 bg-white p-6 shadow-soft transition hover:-translate-y-2">
-            <div class="flex items-center justify-between">
-              <span class="rounded-full bg-brand-sand/55 px-3 py-1 text-xs uppercase tracking-[0.25em] text-brand-dark">${item.tag}</span>
-              <span class="envio-badge">🚚 Envío $7</span>
-            </div>
-            <a href="${item.pageUrl}" title="${item.title}">
-              <img class="mt-4 h-72 w-full rounded-2xl object-contain bg-brand-sand/10 hover:opacity-90 transition" src="${item.img}" alt="${item.title}" width="600" height="400" loading="lazy" />
+        return `<article class="rounded-3xl border border-brand-sand/60 bg-white p-6 shadow-soft transition hover:-translate-y-2">
+          <div class="flex items-center justify-between">
+            <span class="rounded-full bg-brand-sand/55 px-3 py-1 text-xs uppercase tracking-[0.25em] text-brand-dark">${item.tag}</span>
+            <span class="envio-badge">🚚 Envío $7</span>
+          </div>
+          <a href="${item.pageUrl}" title="${item.title}">
+            <img class="mt-4 h-72 w-full rounded-2xl object-contain bg-brand-sand/10 hover:opacity-90 transition" src="${item.img}" alt="${item.title}" width="600" height="400" loading="lazy" />
+          </a>
+          <h3 class="mt-4 font-display text-xl text-brand-dark">${item.title}</h3>
+          <p class="mt-1 text-2xl font-semibold text-brand-dark">${money(item.price)} <span class="text-sm font-normal text-brand-dark/50">+ $7 envío</span></p>
+          <p class="mt-2 text-sm text-brand-dark/80">${item.desc}</p>
+          <div class="mt-5 flex flex-col gap-3">
+            <a href="${item.pageUrl}" class="rounded-full bg-brand-dark px-5 py-2 text-center text-sm font-semibold text-white hover:bg-brand-dark/90 transition">Ver detalles</a>
+            <a href="${waLink(item.waMsg)}" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-2 text-sm font-semibold text-white hover:bg-[#1ebe5d] transition">
+              ${waSVG} Pedir por WhatsApp
             </a>
-            <h3 class="mt-4 font-display text-xl text-brand-dark">${item.title}</h3>
-            <p class="mt-1 text-2xl font-semibold text-brand-dark">${money(item.price)} <span class="text-sm font-normal text-brand-dark/50">+ $7 envío</span></p>
-            <p class="mt-2 text-sm text-brand-dark/80">${item.desc}</p>
-            <div class="mt-5 flex flex-col gap-3">
-              <a href="${item.pageUrl}" class="rounded-full bg-brand-dark px-5 py-2 text-center text-sm font-semibold text-white hover:bg-brand-dark/90 transition">Ver detalles</a>
-              <a href="${waLink(item.waMsg)}" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-2 text-sm font-semibold text-white hover:bg-[#1ebe5d] transition">
-                ${waSVG} Pedir por WhatsApp
-              </a>
-              <button class="rounded-full border border-brand-sand/70 px-5 py-2 text-sm font-semibold text-brand-dark/80 hover:border-brand-primary transition" data-add="${id}">Agregar al carrito</button>
-            </div>
-          </article>`;
+            <button class="rounded-full border border-brand-sand/70 px-5 py-2 text-sm font-semibold text-brand-dark/80 hover:border-brand-primary transition" data-add="${id}">Agregar al carrito</button>
+          </div>
+        </article>`;
       }
 
-      document.getElementById("paquetes-grid").innerHTML = paqueteIds.map(buildCard).join("");
+      document.getElementById("paquetes-grid").innerHTML = Object.keys(catalog).map(buildCard).join("");
 
-      /* TOAST */
-      const toast = document.getElementById("toast");
-      let toastTimer = null;
-      function showToast(text) { toast.textContent = text; toast.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove("show"), 1600); }
+      // Carrito
+      const STORAGE_KEY = "CD_CART";
+      function loadCart() { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+      function saveCart(c) { localStorage.setItem(STORAGE_KEY, JSON.stringify(c)); }
+      function cartCount(c) { return Object.values(c).reduce((a,b) => a + (Number(b)||0), 0); }
+      function cartSubtotal(c) { return Object.entries(c).reduce((t,[id,q]) => t + (catalog[id]?.price||0) * (Number(q)||0), 0); }
+      function cartTotal(c) { return cartSubtotal(c) + (cartCount(c) > 0 ? ENVIO : 0); }
 
-      /* MOBILE MENU */
-      const openMenuBtn  = document.getElementById("openMenu");
-      const closeMenuBtn = document.getElementById("closeMenu");
-      const menuOverlay  = document.getElementById("menuOverlay");
-      const mobileMenu   = document.getElementById("mobileMenu");
-      const cartDrawer   = document.getElementById("cartDrawer");
-      const checkoutModal = document.getElementById("checkoutModal");
-      const paymentModal  = document.getElementById("paymentModal");
-
-      function setScrollLock() {
-        const open = !cartDrawer.classList.contains("translate-x-full") || !checkoutModal.classList.contains("hidden") || !paymentModal.classList.contains("hidden") || (!mobileMenu.classList.contains("hidden") && !mobileMenu.classList.contains("translate-x-full"));
-        document.body.style.overflow = open ? "hidden" : "";
-      }
-      function openMenu()  { menuOverlay.classList.remove("hidden"); mobileMenu.classList.remove("hidden"); requestAnimationFrame(() => { mobileMenu.classList.remove("translate-x-full"); openMenuBtn?.setAttribute("aria-expanded","true"); setScrollLock(); }); }
-      function closeMenu() { mobileMenu.classList.add("translate-x-full"); openMenuBtn?.setAttribute("aria-expanded","false"); setTimeout(() => { mobileMenu.classList.add("hidden"); menuOverlay.classList.add("hidden"); setScrollLock(); }, 180); }
-      openMenuBtn?.addEventListener("click", openMenu);
-      closeMenuBtn?.addEventListener("click", closeMenu);
-      menuOverlay?.addEventListener("click", closeMenu);
-      document.querySelectorAll("#mobileMenu a[href^='#']").forEach((a) => a.addEventListener("click", closeMenu));
-
-      /* CARRITO */
-      const STORAGE_KEY = "CD_CART_V1";
-      const cartOverlay   = document.getElementById("cartOverlay");
-      const cartItemsEl   = document.getElementById("cartItems");
-      const cartTotalEl   = document.getElementById("cartTotal");
-      const cartSubtotalEl = document.getElementById("cartSubtotal");
-      const cartCountEl   = document.getElementById("cartCount");
-      const openCartBtn   = document.getElementById("openCart");
-      const closeCartBtn  = document.getElementById("closeCart");
-      const checkoutBtn   = document.getElementById("checkoutBtn");
-      const checkoutForm  = document.getElementById("checkoutForm");
-      const checkoutCancel = document.getElementById("checkoutCancel");
-      const paymentClose  = document.getElementById("paymentClose");
-      const receiptForm   = document.getElementById("receiptForm");
-      const receiptFile   = document.getElementById("receiptFile");
-      const receiptName   = document.getElementById("receiptName");
-      const sendReceiptBtn = document.getElementById("sendReceiptBtn");
-      const BANK = { banco:"Banco Pichincha", cuenta:"2208128370", nombre:"Noemi Jimenez Caceres", cedula:"0929476489" };
-      let currentOrder = null;
-      if (receiptForm) receiptForm.action = "https://formsubmit.co/cactusdesert.ec@gmail.com";
-
-      function loadCart()      { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}"); } catch { return {}; } }
-      function saveCart(c)     { localStorage.setItem(STORAGE_KEY, JSON.stringify(c)); }
-      function cartCount(c)    { return Object.values(c).reduce((s,q) => s+(Number(q)||0), 0); }
-      function cartSubtotal(c) { let t=0; for(const [id,qty] of Object.entries(c)) if(catalog[id]) t+=catalog[id].price*(Number(qty)||0); return t; }
-      function cartTotal(c)    { return cartSubtotal(c) + (cartCount(c) > 0 ? ENVIO : 0); }
-
-      function updateBadge() {
-        const n = cartCount(loadCart());
-        cartCountEl.textContent = String(n);
-        cartCountEl.classList.toggle("hidden", n===0);
-        cartCountEl.classList.toggle("inline-flex", n>0);
-      }
-
-      function renderCart() {
+      function updateUI() {
         const cart = loadCart();
-        const ids = Object.keys(cart).filter((id) => catalog[id]);
-        cartItemsEl.innerHTML = "";
-        if (!ids.length) {
-          cartItemsEl.innerHTML = `<div class="rounded-3xl border border-brand-sand/60 bg-brand-sand/15 p-6 text-center"><p class="font-display text-2xl text-brand-dark">Tu carrito está vacío</p><p class="mt-2 text-sm text-brand-dark/70">Agrega un paquete para continuar.</p></div>`;
-          if(cartSubtotalEl) cartSubtotalEl.textContent = money(0);
-          cartTotalEl.textContent = money(0); checkoutBtn.disabled = true; updateBadge(); return;
+        const count = cartCount(cart);
+        document.getElementById("cartCount").textContent = count;
+        document.getElementById("cartCount").classList.toggle("hidden", count === 0);
+        document.getElementById("cartSubtotal").textContent = money(cartSubtotal(cart));
+        document.getElementById("cartTotal").textContent = money(cartTotal(cart));
+        document.getElementById("checkoutBtn").disabled = count === 0;
+        
+        const container = document.getElementById("cartItems");
+        if (!Object.keys(cart).length) {
+          container.innerHTML = `<div class="text-center p-6"><p>Carrito vacío</p></div>`;
+          return;
         }
-        ids.forEach((id) => {
-          const item = catalog[id]; const qty = Number(cart[id]||1);
-          const row = document.createElement("div");
-          row.className = "flex items-center gap-4 rounded-2xl border border-brand-sand/60 bg-white p-4";
-          row.innerHTML = `
-            <img src="${item.img}" alt="${item.title}" width="56" height="56" class="h-14 w-14 rounded-xl object-cover border border-brand-sand/50" loading="lazy"/>
-            <div class="min-w-0 flex-1">
-              <p class="truncate font-semibold text-brand-dark text-sm">${item.title}</p>
-              <p class="text-sm text-brand-dark/70">${money(item.price)} · Subtotal: ${money(item.price*qty)}</p>
-              <div class="mt-2 flex items-center gap-2">
-                <button data-dec="${id}" class="h-9 w-9 rounded-full border border-brand-sand/70 text-lg font-bold text-brand-dark hover:border-brand-primary">−</button>
-                <span class="min-w-[24px] text-center text-sm font-semibold">${qty}</span>
-                <button data-inc="${id}" class="h-9 w-9 rounded-full border border-brand-sand/70 text-lg font-bold text-brand-dark hover:border-brand-primary">+</button>
-              </div>
-            </div>
-            <button data-del="${id}" class="rounded-xl border border-brand-sand/70 p-2 text-brand-dark/70 hover:border-brand-primary">🗑️</button>`;
-          cartItemsEl.appendChild(row);
-        });
-        const sub = cartSubtotal(cart);
-        const tot = cartTotal(cart);
-        if(cartSubtotalEl) cartSubtotalEl.textContent = money(sub);
-        cartTotalEl.textContent = money(tot);
-        checkoutBtn.disabled = false;
-        document.querySelectorAll("[data-inc]").forEach((b) => { b.onclick=()=>{ const c=loadCart(); c[b.dataset.inc]=(Number(c[b.dataset.inc])||0)+1; saveCart(c); renderCart(); }; });
-        document.querySelectorAll("[data-dec]").forEach((b) => { b.onclick=()=>{ const c=loadCart(); const n=(Number(c[b.dataset.dec])||0)-1; if(n<=0) delete c[b.dataset.dec]; else c[b.dataset.dec]=n; saveCart(c); renderCart(); }; });
-        document.querySelectorAll("[data-del]").forEach((b) => { b.onclick=()=>{ const c=loadCart(); delete c[b.dataset.del]; saveCart(c); renderCart(); }; });
-        updateBadge();
+        container.innerHTML = Object.entries(cart).map(([id, qty]) => {
+          const item = catalog[id];
+          return `<div class="flex gap-3 p-3 border-b">
+            <img src="${item.img}" class="w-16 h-16 rounded object-cover" />
+            <div class="flex-1"><p class="font-semibold">${item.title}</p><p>${money(item.price)} c/u</p>
+            <div class="flex gap-2 mt-1"><button data-dec="${id}" class="px-2 border rounded">-</button><span>${qty}</span><button data-inc="${id}" class="px-2 border rounded">+</button></div></div>
+            <button data-del="${id}" class="text-red-500">🗑️</button>
+          </div>`;
+        }).join("");
+        document.querySelectorAll("[data-inc]").forEach(b => b.onclick = () => { let c = loadCart(); c[b.dataset.inc] = (Number(c[b.dataset.inc])||0) + 1; saveCart(c); updateUI(); });
+        document.querySelectorAll("[data-dec]").forEach(b => b.onclick = () => { let c = loadCart(); let n = (Number(c[b.dataset.dec])||0) - 1; if(n <= 0) delete c[b.dataset.dec]; else c[b.dataset.dec] = n; saveCart(c); updateUI(); });
+        document.querySelectorAll("[data-del]").forEach(b => b.onclick = () => { let c = loadCart(); delete c[b.dataset.del]; saveCart(c); updateUI(); });
       }
-
-      const openCart  = () => { renderCart(); cartOverlay.classList.remove("hidden"); cartDrawer.classList.remove("translate-x-full"); setScrollLock(); };
-      const closeCart = () => { cartOverlay.classList.add("hidden"); cartDrawer.classList.add("translate-x-full"); setScrollLock(); };
-      openCartBtn.addEventListener("click", openCart);
-      closeCartBtn.addEventListener("click", closeCart);
-      cartOverlay.addEventListener("click", closeCart);
 
       document.addEventListener("click", (e) => {
         const btn = e.target.closest("[data-add]");
-        if (!btn) return;
-        const id = btn.dataset.add;
-        if (!catalog[id]) return;
-        const c = loadCart(); c[id]=(Number(c[id])||0)+1; saveCart(c); updateBadge(); showToast("✅ Agregado al carrito");
+        if(btn) { let c = loadCart(); c[btn.dataset.add] = (Number(c[btn.dataset.add])||0) + 1; saveCart(c); updateUI(); showToast("✅ Agregado al carrito"); }
       });
 
-      const openCheckoutModal  = () => { checkoutModal.classList.remove("hidden"); checkoutModal.classList.add("flex"); setScrollLock(); };
-      const closeCheckoutModal = () => { checkoutModal.classList.add("hidden"); checkoutModal.classList.remove("flex"); setScrollLock(); };
-      checkoutBtn.addEventListener("click", () => { if(!cartCount(loadCart())) return; closeCart(); openCheckoutModal(); });
-      checkoutCancel.addEventListener("click", closeCheckoutModal);
-      checkoutModal.addEventListener("click", (e) => { if(e.target===checkoutModal) closeCheckoutModal(); });
+      function showToast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 2000); }
 
-      function openPaymentModal(order) {
-        document.getElementById("bankName").textContent    = BANK.banco;
-        document.getElementById("bankAccount").textContent = BANK.cuenta;
-        document.getElementById("bankHolder").textContent  = BANK.nombre;
-        document.getElementById("bankId").textContent      = BANK.cedula;
-        document.getElementById("paySubtotal").textContent = money(order.subtotal);
-        document.getElementById("payTotal").textContent    = money(order.total);
-        document.getElementById("orderIdText").textContent = `Pedido: ${order.id}`;
-        document.getElementById("receiptFile").value = "";
-        document.getElementById("receiptName").textContent = "Ningún archivo seleccionado";
-        document.getElementById("fsSubject").value   = `Comprobante - ${order.id}`;
-        document.getElementById("fsReplyTo").value   = order.shipping.email||"";
-        document.getElementById("fsPedidoId").value  = order.id;
-        document.getElementById("fsTotal").value     = money(order.total);
-        document.getElementById("fsCliente").value   = order.shipping.fullName||"";
-        document.getElementById("fsTelefono").value  = order.shipping.phone||"";
-        document.getElementById("fsCedula").value    = order.shipping.idNumber||"";
-        document.getElementById("fsDireccion").value = order.shipping.address||"";
-        document.getElementById("fsItems").value     = (order.items||[]).map((i)=>`${i.title} x${i.qty} (${money(i.price)} c/u)`).join(" | ");
-        document.getElementById("fsBank").value      = `Banco: ${BANK.banco} | Cuenta: ${BANK.cuenta} | Nombre: ${BANK.nombre} | Cédula: ${BANK.cedula} | Total: ${money(order.total)}`;
-        paymentModal.classList.remove("hidden"); paymentModal.classList.add("flex"); setScrollLock();
-      }
-      const closePaymentModal = () => { paymentModal.classList.add("hidden"); paymentModal.classList.remove("flex"); currentOrder=null; setScrollLock(); };
-      paymentClose.addEventListener("click", closePaymentModal);
-      paymentModal.addEventListener("click", (e) => { if(e.target===paymentModal) closePaymentModal(); });
+      // Modales
+      const cartDrawer = document.getElementById("cartDrawer");
+      const cartOverlay = document.getElementById("cartOverlay");
+      document.getElementById("openCart").onclick = () => { updateUI(); cartDrawer.classList.remove("translate-x-full"); cartOverlay.classList.remove("hidden"); };
+      document.getElementById("closeCart").onclick = () => { cartDrawer.classList.add("translate-x-full"); cartOverlay.classList.add("hidden"); };
+      cartOverlay.onclick = () => { cartDrawer.classList.add("translate-x-full"); cartOverlay.classList.add("hidden"); };
 
-      receiptFile.addEventListener("change", () => { receiptName.textContent = receiptFile.files?.[0]?.name || "Ningún archivo seleccionado"; });
+      const checkoutModal = document.getElementById("checkoutModal");
+      document.getElementById("checkoutBtn").onclick = () => { if(cartCount(loadCart())) { cartDrawer.classList.add("translate-x-full"); cartOverlay.classList.add("hidden"); checkoutModal.classList.remove("hidden"); } };
+      document.getElementById("checkoutCancel").onclick = () => checkoutModal.classList.add("hidden");
+      
+      const paymentModal = document.getElementById("paymentModal");
+      const successModal = document.getElementById("successModal");
+      const finalForm = document.getElementById("finalForm");
+      
+      let currentOrderData = null;
+      let formSubmitted = false;
 
-      receiptForm.addEventListener("submit", (e) => {
-        if (!currentOrder) { e.preventDefault(); showToast("⚠️ Primero genera el pedido"); return; }
-        if (!receiptFile.files?.[0]) { e.preventDefault(); showToast("⚠️ Selecciona el comprobante"); return; }
-        sendReceiptBtn.disabled = true;
-        const old = sendReceiptBtn.textContent; sendReceiptBtn.textContent = "Enviando...";
-        showToast("📩 Enviando...");
-        setTimeout(() => { sendReceiptBtn.disabled=false; sendReceiptBtn.textContent=old; showToast("✅ Comprobante enviado"); }, 1400);
-      });
+      // Función que se ejecuta cuando el iframe carga (después de enviar FormSubmit)
+      window.handleFormSubmitResponse = function() {
+        if (!formSubmitted) return;
+        setTimeout(() => {
+          paymentModal.classList.add("hidden");
+          successModal.classList.remove("hidden");
+          localStorage.removeItem(STORAGE_KEY);
+          updateUI();
+          currentOrderData = null;
+          document.getElementById("receiptFile").value = "";
+          document.getElementById("receiptName").textContent = "Ningún archivo";
+          formSubmitted = false;
+        }, 500);
+      };
 
-      checkoutForm.addEventListener("submit", (e) => {
+      // Paso 1: Guardar datos del cliente
+      document.getElementById("checkoutForm").onsubmit = (e) => {
         e.preventDefault();
         const cart = loadCart();
-        if (!cartCount(cart)) { showToast("⚠️ Carrito vacío"); closeCheckoutModal(); return; }
-        const fd = new FormData(checkoutForm);
-        const shipping = { fullName:String(fd.get("fullName")||"").trim(), email:String(fd.get("email")||"").trim(), phone:String(fd.get("phone")||"").trim(), idNumber:String(fd.get("idNumber")||"").trim(), address:String(fd.get("address")||"").trim() };
-        if (!shipping.fullName||!shipping.email||!shipping.phone||!shipping.idNumber||!shipping.address) { showToast("⚠️ Completa todos los campos"); return; }
-        const items = Object.entries(cart).filter(([id])=>catalog[id]).map(([id,qty])=>({id,title:catalog[id].title,price:catalog[id].price,qty:Number(qty)||1}));
-        const sub = cartSubtotal(cart);
-        const tot = cartTotal(cart);
-        currentOrder = { id:"CD-"+Date.now().toString(36).toUpperCase(), shipping, items, subtotal:sub, total:tot, createdAt:new Date().toISOString() };
-        saveCart({}); updateBadge(); renderCart(); closeCheckoutModal(); openPaymentModal(currentOrder);
-      });
+        if(!cartCount(cart)) return;
+        const fd = new FormData(e.target);
+        const shipping = { 
+          fullName: fd.get("fullName"), 
+          email: fd.get("email"), 
+          phone: fd.get("phone"), 
+          idNumber: fd.get("idNumber"), 
+          address: fd.get("address") 
+        };
+        const items = Object.entries(cart).map(([id,q]) => ({ title: catalog[id].title, qty: Number(q), price: catalog[id].price }));
+        const subtotal = cartSubtotal(cart);
+        const total = cartTotal(cart);
+        const orderId = "CD-" + Date.now().toString(36).toUpperCase();
+        
+        currentOrderData = { id: orderId, shipping, items, subtotal, total };
+        
+        // Preparar campos ocultos del formulario final
+        document.getElementById("fsSubject").value = `🎉 NUEVO PEDIDO ${orderId} 🎉`;
+        document.getElementById("fsPedidoId").value = orderId;
+        document.getElementById("fsCliente").value = shipping.fullName;
+        document.getElementById("fsEmail").value = shipping.email;
+        document.getElementById("fsTelefono").value = shipping.phone;
+        document.getElementById("fsCedula").value = shipping.idNumber;
+        document.getElementById("fsDireccion").value = shipping.address;
+        document.getElementById("fsProductos").value = items.map(i => `${i.title} x${i.qty} = ${money(i.price * i.qty)}`).join(" | ");
+        document.getElementById("fsSubtotal").value = money(subtotal);
+        document.getElementById("fsTotal").value = money(total);
+        
+        document.getElementById("payTotal").textContent = money(total);
+        document.getElementById("orderIdText").innerHTML = `✨ Pedido: ${orderId} ✨`;
+        
+        checkoutModal.classList.add("hidden");
+        paymentModal.classList.remove("hidden");
+      };
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key!=="Escape") return;
-        if (!paymentModal.classList.contains("hidden"))  return closePaymentModal();
-        if (!checkoutModal.classList.contains("hidden")) return closeCheckoutModal();
-        if (!cartDrawer.classList.contains("translate-x-full")) return closeCart();
-        if (!mobileMenu.classList.contains("hidden")&&!mobileMenu.classList.contains("translate-x-full")) return closeMenu();
-      });
+      document.getElementById("paymentClose").onclick = () => { paymentModal.classList.add("hidden"); currentOrderData = null; };
+      
+      // Paso 2: Enviar TODO (datos + comprobante) SIN redirección
+      finalForm.onsubmit = (e) => {
+        e.preventDefault();
+        
+        const file = document.getElementById("receiptFile").files[0];
+        if(!file) { showToast("⚠️ Selecciona el comprobante"); return false; }
+        if(!currentOrderData) { showToast("⚠️ Error, intenta de nuevo"); return false; }
+        
+        const btn = document.getElementById("sendReceiptBtn");
+        btn.disabled = true;
+        btn.textContent = "Enviando...";
+        
+        // Configurar el formulario para enviar al iframe oculto (sin redirigir)
+        finalForm.target = "hidden_iframe";
+        finalForm.action = "https://formsubmit.co/cactusdesert.ec@gmail.com";
+        
+        formSubmitted = true;
+        finalForm.submit();
+        
+        // Resetear el target para futuros envíos
+        setTimeout(() => {
+          finalForm.target = "";
+        }, 100);
+        
+        return true;
+      };
+      
+      document.getElementById("receiptFile").onchange = (e) => { 
+        document.getElementById("receiptName").textContent = e.target.files[0]?.name || "Ningún archivo"; 
+      };
+      
+      document.getElementById("closeSuccessModal").onclick = () => successModal.classList.add("hidden");
 
-      updateBadge();
+      // Menú móvil
+      const openMenuBtn = document.getElementById("openMenu");
+      const closeMenuBtn = document.getElementById("closeMenu");
+      const menuOverlay = document.getElementById("menuOverlay");
+      const mobileMenu = document.getElementById("mobileMenu");
+      
+      openMenuBtn?.addEventListener("click", () => { menuOverlay.classList.remove("hidden"); mobileMenu.classList.remove("hidden"); setTimeout(() => mobileMenu.classList.remove("translate-x-full"), 10); });
+      closeMenuBtn?.addEventListener("click", () => { mobileMenu.classList.add("translate-x-full"); setTimeout(() => { mobileMenu.classList.add("hidden"); menuOverlay.classList.add("hidden"); }, 300); });
+      menuOverlay?.addEventListener("click", () => { mobileMenu.classList.add("translate-x-full"); setTimeout(() => { mobileMenu.classList.add("hidden"); menuOverlay.classList.add("hidden"); }, 300); });
+      document.querySelectorAll("#mobileMenu a[href^='#']").forEach(a => a.addEventListener("click", () => { mobileMenu.classList.add("translate-x-full"); setTimeout(() => { mobileMenu.classList.add("hidden"); menuOverlay.classList.add("hidden"); }, 300); }));
+
+      updateUI();
     </script>
   </body>
 </html>
